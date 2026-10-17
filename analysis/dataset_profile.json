@@ -1,0 +1,48 @@
+{
+  "Grocery_and_Gourmet_Food": {
+    "train_interactions_per_user": {
+      "mean": 8.302704175464887,
+      "median": 5.0,
+      "p90": 17.0,
+      "maximum": 202
+    },
+    "test_interactions_per_test_user": {
+      "mean": 1.0,
+      "median": 1.0,
+      "p90": 1.0,
+      "maximum": 1
+    },
+    "train_interactions_for_test_users": {
+      "mean": 8.302704175464887,
+      "median": 5.0,
+      "p90": 17.0,
+      "maximum": 202
+    },
+    "test_users": 14681,
+    "dev_test_user_overlap": 14681,
+    "items_absent_from_train": 26
+  },
+  "ML_1MTOPK": {
+    "train_interactions_per_user": {
+      "mean": 94.29061671087533,
+      "median": 57.0,
+      "p90": 222.90000000000055,
+      "maximum": 1397
+    },
+    "test_interactions_per_test_user": {
+      "mean": 12.716814159292035,
+      "median": 5.0,
+      "p90": 27.0,
+      "maximum": 220
+    },
+    "train_interactions_for_test_users": {
+      "mean": 218.96902654867256,
+      "median": 184.5,
+      "p90": 433.0,
+      "maximum": 1397
+    },
+    "test_users": 226,
+    "dev_test_user_overlap": 116,
+    "items_absent_from_train": 0
+  }
+}

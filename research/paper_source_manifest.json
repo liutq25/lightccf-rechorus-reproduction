@@ -1,0 +1,73 @@
+{
+  "retrieved_date": "2026-10-16",
+  "timezone": "Asia/Shanghai",
+  "official_commit": "45645ef15fc08e858ffc81e1b2530b4b1805ad34",
+  "sources": [
+    {
+      "local_path": "LightCCF_2504.10113.pdf",
+      "url": "https://arxiv.org/pdf/2504.10113v1",
+      "sha256": "ec15f7b11f7da5dfcf12c5f575c1d676a5359dd1fa100e1d6c944a4294d81c6c",
+      "bytes": 1539094
+    },
+    {
+      "local_path": "LightCCF_2504.10113.html",
+      "url": "https://arxiv.org/html/2504.10113v1",
+      "sha256": "aa22d4ae0949f6d3c166ff2dfa87c1724353e67cf329d2bf6acdfc80c5d9115a",
+      "bytes": 333298
+    },
+    {
+      "local_path": "official_LightCCF.py",
+      "url": "https://raw.githubusercontent.com/ZzYUuuu/LightCCF/45645ef15fc08e858ffc81e1b2530b4b1805ad34/LightCCF.py",
+      "sha256": "1e52ddaa5634fed2db5a883ec2686428b0ac9a6bb2b446e6c7f69aca8010bd66",
+      "bytes": 3645
+    },
+    {
+      "local_path": "official_LightCCF.sh",
+      "url": "https://raw.githubusercontent.com/ZzYUuuu/LightCCF/45645ef15fc08e858ffc81e1b2530b4b1805ad34/LightCCF.sh",
+      "sha256": "912f6cf98f3865df61cf9817d3848441be40362d95f1c2cfa7897b8d6db99d9e",
+      "bytes": 343
+    },
+    {
+      "local_path": "official_main.py",
+      "url": "https://raw.githubusercontent.com/ZzYUuuu/LightCCF/45645ef15fc08e858ffc81e1b2530b4b1805ad34/main.py",
+      "sha256": "670f4c8d294e32647939f653fcfd3bc683d94726a2d5d1214f1d426ee855cfa2",
+      "bytes": 2380
+    },
+    {
+      "local_path": "official_data_loader.py",
+      "url": "https://raw.githubusercontent.com/ZzYUuuu/LightCCF/45645ef15fc08e858ffc81e1b2530b4b1805ad34/utility/data_loader.py",
+      "sha256": "7d19e185f0f6fbd0fec04ec28e39880fb391b5ecb8c95bc55e32bd2ec696182e",
+      "bytes": 8254
+    },
+    {
+      "local_path": "official_losses.py",
+      "url": "https://raw.githubusercontent.com/ZzYUuuu/LightCCF/45645ef15fc08e858ffc81e1b2530b4b1805ad34/utility/losses.py",
+      "sha256": "0717e2cc8f37cac9f3e947647f6c043ed0839b207dc3f4fa3311aebcded86da3",
+      "bytes": 1639
+    },
+    {
+      "local_path": "official_parser.py",
+      "url": "https://raw.githubusercontent.com/ZzYUuuu/LightCCF/45645ef15fc08e858ffc81e1b2530b4b1805ad34/utility/parser.py",
+      "sha256": "ca37dbc15803e8addf2975de07280c558d832271d9b71e12773f896fa7ac94ed",
+      "bytes": 1643
+    },
+    {
+      "local_path": "official_tester.py",
+      "url": "https://raw.githubusercontent.com/ZzYUuuu/LightCCF/45645ef15fc08e858ffc81e1b2530b4b1805ad34/utility/tester.py",
+      "sha256": "196c7a516af753cdaf2a6a0aa9480515b480df68802d1722a4cf4e8770bbbcfa",
+      "bytes": 8066
+    },
+    {
+      "local_path": "official_tools.py",
+      "url": "https://raw.githubusercontent.com/ZzYUuuu/LightCCF/45645ef15fc08e858ffc81e1b2530b4b1805ad34/utility/tools.py",
+      "sha256": "eda5b820e591cae8504813d87a50baa3ce41e72516433904442d6ca927083a62",
+      "bytes": 1465
+    },
+    {
+      "local_path": "official_trainer.py",
+      "url": "https://raw.githubusercontent.com/ZzYUuuu/LightCCF/45645ef15fc08e858ffc81e1b2530b4b1805ad34/utility/trainer.py",
+      "sha256": "032e293a728abcbbc259654788572585f906d50c615d8f8427e68bd0bb751d00",
+      "bytes": 5493
+    }
+  ]
+}

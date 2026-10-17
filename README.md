@@ -1,0 +1,70 @@
+# LightCCF 推荐模型课程复现
+
+本项目复现 SIGIR 2025 论文 *Unveiling Contrastive Learning's Capability of Neighborhood Aggregation for Collaborative Filtering* 的 LightCCF 方法，并按课程要求在 ReChorus 2.0 中与 BPRMF、LightGCN 比较。课程数据为 ReChorus 的 `Grocery_and_Gourmet_Food` 和 `ML_1MTOPK`。此外保留作者原始代码与 Douban-book 数据，用于独立的论文原始协议核对。
+
+公开代码仓库不重新分发上游框架、论文作者代码或 MovieLens 原始数据。首次使用时运行下文的固定版本设置脚本获取它们；本地课程提交目录保留已运行数据与原始日志。
+
+论文：[arXiv 2504.10113](https://arxiv.org/abs/2504.10113) · [DOI 10.1145/3726302.3730111](https://doi.org/10.1145/3726302.3730111) · [作者代码](https://github.com/ZzYUuuu/LightCCF) · [ReChorus](https://github.com/THUwangcy/ReChorus)
+
+## 已完成的实测结果
+
+核心比较 18 次、NA 消融 6 次，共 24 次正式运行；随机种子为 2023/2024/2025。下表为用户宏平均测试 NDCG@20 的均值±样本标准差。
+
+| 数据集 | BPRMF | LightGCN | LightCCF (MF) |
+|---|---|---|---|
+| Amazon Grocery | 0.02532±0.00078 | 0.02930±0.00045 | 0.03274±0.00067 |
+| MovieLens 1M TopK | 0.09148±0.00312 | 0.09635±0.00173 | 0.06663±0.00255 |
+
+LightCCF 相对 LightGCN 的 NDCG@20 在 Grocery 上提高约 11.71%，MovieLens 上下降约 30.85%，三颗种子各自方向一致。关闭 NA 后，Grocery 为 0.02347±0.00033，MovieLens 为 0.09075±0.00375；加入 NA 的配对差值分别为 +0.00926±0.00098 和 −0.02412±0.00382。该结果表明固定的 Douban 参数不能在两个课程数据集上稳定占优；本项目没有用测试集调参。
+
+完整 @10/@20 指标、最佳轮数、训练时间与显存见 `analysis/runs.csv`、`analysis/summary.csv`；每种子配对差值见 `analysis/paired_deltas.csv`。Grocery LightGCN 三次均达到 200 轮上限，不能把当前结果解释成无限预算下的性能排序。课程数据与原论文数据不同，以上绝对分数不作为原表数值复现误差。
+
+## 目录
+
+- `framework/ReChorus/`：固定在提交 `c164ec4303cc20ddcfbd1b57de366a481811d1e5` 的课程框架；新增 `src/models/general/LightCCF.py` 与 `src/helpers/ReproductionRunner.py`。
+- `extensions/`：上述两个新增文件的可发布副本，由 `scripts/setup_upstream.py` 安装到框架目录。
+- `vendor/LightCCF-main/`：作者代码与原始论文数据快照，不能将其输出与课程实验混为一谈。
+- `scripts/`：数据准备、数据审计、单次实验、实验矩阵、结果汇总、作者代码锚点运行。
+- `configs/`：训练前锁定的配置。`*_alpha0.json` 是邻域聚合损失消融。
+- `research/`：论文、原始表 5、来源哈希、实现差异、课程要求与数据审计。
+- `runs/`：每次实验的配置、日志、逐轮指标、最佳模型与用户级结果。`pilot/` 仅用于运行检查，不计入正式均值。
+- `analysis/`：正式结果的汇总 CSV、配对差值和图表；由脚本生成。
+
+## 环境与运行
+
+已运行环境为 Windows、Python 3.11.15、PyTorch 2.5.1+cu121、NumPy 2.4.6、NVIDIA RTX 3050 4GB。依赖 ReChorus 源码所用的 `pandas`、`scipy`、`scikit-learn`、`tqdm`、`matplotlib` 等 Python 包。现有 LightGCN 上游编码器直接调用 `.cuda()`，矩阵实验需要可用的 NVIDIA CUDA 环境。
+
+先安装与本机驱动匹配的 CUDA 版 PyTorch，再运行 `python -m pip install -r requirements.txt`。运行时可用 `python -c "import torch; print(torch.cuda.is_available())"` 确认所选解释器能看到 GPU。
+
+在项目根目录运行以下命令（把 `python` 替换为可用的 CUDA Python 解释器）：
+
+```powershell
+python scripts/setup_upstream.py
+python scripts/audit_rechorus_data.py
+python scripts/profile_datasets.py
+python scripts/analyze_batch_collisions.py
+python scripts/run_matrix.py --group core --seeds 2023 2024 2025
+python scripts/run_matrix.py --group ablation --seeds 2023 2024 2025
+python scripts/summarize_results.py
+```
+
+MovieLens 处理后的 `ML_1MTOPK` 如需重新生成，应将 GroupLens 官方 `ml-1m.zip` 放于 `data/raw/`，再运行 `python scripts/prepare_rechorus_data.py`。处理脚本固定 UTC+8，以匹配框架原 notebook 保存的划分规模。数据文件的 SHA256、计数和排除规则见 `research/rechorus_data_manifest.json`。
+
+论文原始 Douban-book 数据的五种子核对单独运行：
+
+```powershell
+python scripts/setup_upstream.py --with-author
+python scripts/run_anchor_matrix.py
+python scripts/summarize_official_anchors.py
+```
+
+该核对固定种子 2023–2027，沿用作者代码用测试集 Recall@20 选轮的机制，因此其数字不能与课程矩阵中验证集选轮的结果合并平均。作者代码自身的 `--seed` 参数未在入口中实际设置种子；包装脚本在模型创建之前显式设置 Python、NumPy 和 PyTorch 种子。原文未公开五个种子；本机仅核对 Douban-book，未覆盖 Tmall/Amazon-book 的整套原表。
+固定的作者提交另有一处入口调用笔误：`load_models()` 无参数，却以 `load_models(args)` 调用。包装脚本只在内存中修正该调用，不修改作者源码；结果 JSON 会记录修正与原文件哈希。
+
+## 实验口径
+
+所有课程模型使用同一数据划分、固定 64 维、batch 2048、一个训练负例、学习率 0.001、最多 200 轮、每 5 轮用验证 NDCG@20 选模型，并在测试集做用户级全物品排序。验证阶段屏蔽 train 历史；测试阶段屏蔽 train+dev 历史。主报告指标为 Recall@20 和 NDCG@20，三个种子给出均值及样本标准差。课程数据与论文三套原始数据不同，报告只比较方法趋势，不拿绝对分数做“复现误差”。详细方案见 `实验方案锁定.md`。
+
+## 复核要点
+
+`research/loss_validation_results.json` 记录了本项目 NA/BPR/正则损失与作者代码在固定小批次上的值及嵌入梯度核对。`research/rechorus_audit.md` 解释了框架默认 `test_all` 的未来标签屏蔽问题，以及本项目的全候选评价器为何单独实现。每次正式运行只保留验证集选择的最佳 checkpoint；原始日志和配置保存在对应 `runs/` 目录。

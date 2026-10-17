@@ -1,0 +1,96 @@
+{
+  "upstream": "https://github.com/THUwangcy/ReChorus",
+  "commit": "c164ec4303cc20ddcfbd1b57de366a481811d1e5",
+  "raw": {
+    "url": "https://files.grouplens.org/datasets/movielens/ml-1m.zip",
+    "path": "data\\raw\\ml-1m.zip",
+    "sha256": "a6898adb50b9ca05aa231689da44c217cb524e7ebd39d264c56e2832f2c54e20"
+  },
+  "preprocessing": {
+    "notebook": "data/MovieLens_1M/MovieLens-1M.ipynb",
+    "timezone": "Asia/Shanghai (UTC+8)",
+    "positive_rating_threshold": 4,
+    "positive_min_degree": 5,
+    "split": "global calendar-day 80%/10%/10%; remove dev/test users or items absent in train",
+    "split_day_thresholds": [
+      831,
+      935
+    ],
+    "negative_count": 99,
+    "negative_seeds": {
+      "dev": 1,
+      "test": 2
+    },
+    "negative_exclusion": "all retained positive interactions; sampled candidates supplied for upstream compatibility only",
+    "cold_rows_removed": {
+      "dev": 89,
+      "test": 90
+    },
+    "deviations": [
+      "fixed timezone instead of implicit host timezone",
+      "correct notebook path and undefined-variable typos",
+      "skip unused CTR and item metadata branches",
+      "enforce 5-core convergence explicitly; identical resulting membership on this input"
+    ]
+  },
+  "datasets": {
+    "Grocery_and_Gourmet_Food": {
+      "train": {
+        "rows": 121892,
+        "users": 14681,
+        "items": 8687,
+        "sha256": "026610b38a04930b84468cd6a7407ec9de52393d42eff910d9783856f21adaa6",
+        "path": "framework\\ReChorus\\data\\Grocery_and_Gourmet_Food\\train.csv"
+      },
+      "dev": {
+        "rows": 14681,
+        "users": 14681,
+        "items": 5443,
+        "sha256": "524aeba840c7170281902406f394071bb8d4d8ffc4185d80ed7d1bc3ab03de32",
+        "path": "framework\\ReChorus\\data\\Grocery_and_Gourmet_Food\\dev.csv"
+      },
+      "test": {
+        "rows": 14681,
+        "users": 14681,
+        "items": 5230,
+        "sha256": "9d5591a373a17575f2988f5b5951fa5027fb695c53ce0f857f9497168db51f20",
+        "path": "framework\\ReChorus\\data\\Grocery_and_Gourmet_Food\\test.csv"
+      },
+      "total": {
+        "rows": 151254,
+        "users": 14681,
+        "items": 8713,
+        "density": 0.0011824519884614812
+      }
+    },
+    "ML_1MTOPK": {
+      "train": {
+        "rows": 568761,
+        "users": 6032,
+        "items": 3125,
+        "sha256": "0a3d4d2afb19e1aa4ff98cdf490954484fc68dbbb4be8bef6dd6dc8e6437f33b",
+        "path": "framework\\ReChorus\\data\\ML_1MTOPK\\train.csv"
+      },
+      "dev": {
+        "rows": 2562,
+        "users": 214,
+        "items": 1198,
+        "sha256": "879bd2e65c442b43c59257b5974daf4c928914c80c8c509bcbf56c26accd5ae5",
+        "path": "framework\\ReChorus\\data\\ML_1MTOPK\\dev.csv"
+      },
+      "test": {
+        "rows": 2874,
+        "users": 226,
+        "items": 1260,
+        "sha256": "90e6deb3505ae60a7ba6ca79b74ac3dbfa2244ef37d51211471277dc63bb2716",
+        "path": "framework\\ReChorus\\data\\ML_1MTOPK\\test.csv"
+      },
+      "total": {
+        "rows": 574197,
+        "users": 6032,
+        "items": 3125,
+        "density": 0.030461379310344826
+      }
+    }
+  }
+}

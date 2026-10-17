@@ -1,0 +1,31 @@
+# Upstream repositories and datasets are fetched by scripts/setup_upstream.py.
+/framework/
+/vendor/
+/data/
+/runs/
+/tmp/
+/docx_render/
+
+# Local paper copies, submission artifacts, and generated images.
+/research/*.pdf
+/research/*.html
+/research/*.txt
+/research/*.zip
+/research/LightCCF-main.zip.source.json
+/research/paper_pages/
+/research/requirements_checklist.md
+/research/official_*.py
+/research/official_*.sh
+/*.pdf
+/*.docx
+/*.zip
+/复现报告.md
+/scripts/build_report_docx.py
+/scripts/export_report_pdf.ps1
+/analysis/*.png
+
+# Python and editor outputs.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/

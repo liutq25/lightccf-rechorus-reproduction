@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "Grocery_and_Gourmet_Food",
+    "train_interactions": 121892,
+    "batch_size": 2048,
+    "mean_train_positives_per_user": 8.302704175464887,
+    "expected_other_same_user_positives_per_anchor": 0.3490947611639025,
+    "probability_anchor_has_another_same_user_positive": 0.2444945502318035,
+    "expected_other_same_item_interactions_per_anchor": 1.3250194903155854
+  },
+  {
+    "dataset": "ML_1MTOPK",
+    "train_interactions": 568761,
+    "batch_size": 2048,
+    "mean_train_positives_per_user": 94.29061671087533,
+    "expected_other_same_user_positives_per_anchor": 0.7449521420517402,
+    "probability_anchor_has_another_same_user_positive": 0.4515837176023816,
+    "expected_other_same_item_interactions_per_anchor": 2.3750614942250152
+  }
+]

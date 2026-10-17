@@ -1,0 +1,8 @@
+# Versions used for the reported Windows/CUDA runs.
+# Install a CUDA-enabled PyTorch wheel appropriate for the local driver first.
+numpy==2.4.6
+pandas==3.0.5
+scipy==1.17.1
+scikit-learn==1.9.1
+matplotlib==3.11.1
+tqdm==4.70.1
