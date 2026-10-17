@@ -19,6 +19,8 @@ LightCCF 相对 LightGCN 的 NDCG@20 在 Grocery 上提高约 11.71%，MovieLens
 
 完整 @10/@20 指标、最佳轮数、训练时间与显存见 `analysis/runs.csv`、`analysis/summary.csv`；每种子配对差值见 `analysis/paired_deltas.csv`。Grocery LightGCN 三次均达到 200 轮上限，不能把当前结果解释成无限预算下的性能排序。课程数据与原论文数据不同，以上绝对分数不作为原表数值复现误差。
 
+作者原始 Douban-book 协议的五个种子（2023–2027）也已全部完成：Recall@20 为 **0.18532±0.00092**、NDCG@20 为 **0.18458±0.00050**；相对论文表5的 0.1877/0.1857，分别低约 1.27%/0.60%。最佳轮数为 43/43/45/43/43，均在54–56轮早停。该核对使用作者的测试集选轮，须与课程验证集选轮结果分开解释；全部数值和数据哈希见 `analysis/official_douban_summary.json`。原文其他数据集及全部基线/消融未重跑。
+
 ## 目录
 
 - `framework/ReChorus/`：固定在提交 `c164ec4303cc20ddcfbd1b57de366a481811d1e5` 的课程框架；新增 `src/models/general/LightCCF.py` 与 `src/helpers/ReproductionRunner.py`。

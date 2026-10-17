@@ -27,7 +27,8 @@ def main():
     code_files = [ROOT / p.decode('utf-8') for p in tracked if p]
     if not code_files:
         raise RuntimeError('No tracked code files; stage the reviewed repository first')
-    evidence = list((ROOT / 'analysis').glob('*'))
+    analysis_files = list((ROOT / 'analysis').glob('*'))
+    evidence = []
     for group in ('core', 'ablation', 'official_anchor'):
         base = ROOT / 'runs' / group
         if base.exists():
@@ -41,6 +42,10 @@ def main():
             entries[f'{prefix}/code/{path.relative_to(ROOT).as_posix()}'] = path
     for path in report_files:
         entries[f'{prefix}/{path.name}'] = path
+    # Keep the Markdown report's relative analysis/*.png links usable.
+    for path in analysis_files:
+        if path.is_file():
+            entries[f'{prefix}/{path.relative_to(ROOT).as_posix()}'] = path
     for path in evidence:
         if path.is_file():
             entries[f'{prefix}/evidence/{path.relative_to(ROOT).as_posix()}'] = path

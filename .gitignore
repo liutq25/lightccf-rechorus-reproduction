@@ -23,6 +23,7 @@
 /scripts/build_report_docx.py
 /scripts/export_report_pdf.ps1
 /analysis/*.png
+/analysis/report_stats.json
 
 # Python and editor outputs.
 __pycache__/
