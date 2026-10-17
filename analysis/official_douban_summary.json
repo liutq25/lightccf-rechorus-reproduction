@@ -28,10 +28,30 @@
   ],
   "mean_epoch_train_seconds": 5.596327513227513,
   "metrics": {
+    "Recall@10": {
+      "mean": 0.13164183000000002,
+      "sample_sd": 0.00050806113918504,
+      "paper": 0.133,
+      "minimum": 0.13106623,
+      "maximum": 0.13229867,
+      "absolute_difference": -0.0013581699999999919,
+      "relative_difference_percent": -1.0211804511278122
+    },
+    "NDCG@10": {
+      "mean": 0.183716908,
+      "sample_sd": 0.00014798903530329271,
+      "paper": 0.1848,
+      "minimum": 0.183538,
+      "maximum": 0.18391731,
+      "absolute_difference": -0.00108309199999998,
+      "relative_difference_percent": -0.5860887445887308
+    },
     "Recall@20": {
       "mean": 0.1853179814766641,
       "sample_sd": 0.0009212539284985532,
       "paper": 0.1877,
+      "minimum": 0.18444237920201675,
+      "maximum": 0.18668124293950816,
       "absolute_difference": -0.002382018523335916,
       "relative_difference_percent": -1.2690562191454036
     },
@@ -39,6 +59,8 @@
       "mean": 0.18457727613685088,
       "sample_sd": 0.0005048005599216596,
       "paper": 0.1857,
+      "minimum": 0.18403379860981364,
+      "maximum": 0.18533537947466722,
       "absolute_difference": -0.0011227238631491276,
       "relative_difference_percent": -0.6045901255514963
     }
@@ -62,6 +84,13 @@
       "numpy": "2.4.6",
       "train_sha256": "de1ea9b264fb459643ef0729584aacaa7ef5da4ada8f195eb1392beea4f2b905",
       "test_sha256": "fa899e46e741adca662a5814bd4858a37f00c69518de6282b0cd215bba97ca9d",
+      "all_metrics_at_selected_epoch": {
+        "Recall@10": 0.13188748,
+        "NDCG@10": 0.18378177,
+        "Recall@20": 0.18542027187003343,
+        "NDCG@20": 0.18461840844336858
+      },
+      "metric_precision": "@10 read from eight-decimal author log; @20 captured at full precision",
       "observed_epochs": 54,
       "training_seconds_from_author_log": 272.30600000000004,
       "mean_epoch_train_seconds": 5.042703703703705
@@ -84,6 +113,13 @@
       "numpy": "2.4.6",
       "train_sha256": "de1ea9b264fb459643ef0729584aacaa7ef5da4ada8f195eb1392beea4f2b905",
       "test_sha256": "fa899e46e741adca662a5814bd4858a37f00c69518de6282b0cd215bba97ca9d",
+      "all_metrics_at_selected_epoch": {
+        "Recall@10": 0.13175765,
+        "NDCG@10": 0.1836125,
+        "Recall@20": 0.18444237920201675,
+        "NDCG@20": 0.18420980580742552
+      },
+      "metric_precision": "@10 read from eight-decimal author log; @20 captured at full precision",
       "observed_epochs": 54,
       "training_seconds_from_author_log": 274.899,
       "mean_epoch_train_seconds": 5.090722222222222
@@ -106,6 +142,13 @@
       "numpy": "2.4.6",
       "train_sha256": "de1ea9b264fb459643ef0729584aacaa7ef5da4ada8f195eb1392beea4f2b905",
       "test_sha256": "fa899e46e741adca662a5814bd4858a37f00c69518de6282b0cd215bba97ca9d",
+      "all_metrics_at_selected_epoch": {
+        "Recall@10": 0.13229867,
+        "NDCG@10": 0.18391731,
+        "Recall@20": 0.18668124293950816,
+        "NDCG@20": 0.18533537947466722
+      },
+      "metric_precision": "@10 read from eight-decimal author log; @20 captured at full precision",
       "observed_epochs": 56,
       "training_seconds_from_author_log": 327.1959999999999,
       "mean_epoch_train_seconds": 5.8427857142857125
@@ -128,6 +171,13 @@
       "numpy": "2.4.6",
       "train_sha256": "de1ea9b264fb459643ef0729584aacaa7ef5da4ada8f195eb1392beea4f2b905",
       "test_sha256": "fa899e46e741adca662a5814bd4858a37f00c69518de6282b0cd215bba97ca9d",
+      "all_metrics_at_selected_epoch": {
+        "Recall@10": 0.13106623,
+        "NDCG@10": 0.18373496,
+        "Recall@20": 0.18556392741236605,
+        "NDCG@20": 0.18468898834897943
+      },
+      "metric_precision": "@10 read from eight-decimal author log; @20 captured at full precision",
       "observed_epochs": 54,
       "training_seconds_from_author_log": 318.429,
       "mean_epoch_train_seconds": 5.8968333333333325
@@ -150,6 +200,13 @@
       "numpy": "2.4.6",
       "train_sha256": "de1ea9b264fb459643ef0729584aacaa7ef5da4ada8f195eb1392beea4f2b905",
       "test_sha256": "fa899e46e741adca662a5814bd4858a37f00c69518de6282b0cd215bba97ca9d",
+      "all_metrics_at_selected_epoch": {
+        "Recall@10": 0.13119912,
+        "NDCG@10": 0.183538,
+        "Recall@20": 0.18448208595939608,
+        "NDCG@20": 0.18403379860981364
+      },
+      "metric_precision": "@10 read from eight-decimal author log; @20 captured at full precision",
       "observed_epochs": 54,
       "training_seconds_from_author_log": 329.8640000000001,
       "mean_epoch_train_seconds": 6.108592592592594

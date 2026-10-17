@@ -19,7 +19,7 @@ def main():
     destination = ROOT.parent / f'{prefix}.zip'
     if destination.exists():
         raise RuntimeError(f'Refusing to overwrite existing submission: {destination}')
-    report_files = [ROOT / name for name in ('复现报告.md', '复现报告.docx', '复现报告.pdf')]
+    report_files = [ROOT / name for name in ('复现报告.tex', '复现报告.pdf', 'LaTeX报告说明.md')]
     for path in report_files:
         if not path.is_file():
             raise FileNotFoundError(path)
@@ -42,7 +42,8 @@ def main():
             entries[f'{prefix}/code/{path.relative_to(ROOT).as_posix()}'] = path
     for path in report_files:
         entries[f'{prefix}/{path.name}'] = path
-    # Keep the Markdown report's relative analysis/*.png links usable.
+    # Include reusable plots and numerical evidence. The LaTeX report itself is
+    # standalone: its tables, references and vector-plot coordinates are inline.
     for path in analysis_files:
         if path.is_file():
             entries[f'{prefix}/{path.relative_to(ROOT).as_posix()}'] = path

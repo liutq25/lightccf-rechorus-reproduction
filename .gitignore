@@ -20,10 +20,18 @@
 /*.docx
 /*.zip
 /复现报告.md
+/复现报告.tex
+/LaTeX报告说明.md
 /scripts/build_report_docx.py
 /scripts/export_report_pdf.ps1
 /analysis/*.png
+/analysis/*.pdf
 /analysis/report_stats.json
+/latex_render/
+/*.aux
+/*.log
+/*.out
+/*.synctex.gz
 
 # Python and editor outputs.
 __pycache__/

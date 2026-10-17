@@ -1,5 +1,30 @@
 # LightCCF 推荐模型课程复现
 
+## 最新 LaTeX 报告与图表核查
+
+课程提交报告全文已改为单文件 LaTeX，表格、参考文献和5幅 PGFPlots 矢量实验图的坐标全部内嵌。源码包含小组个人信息，随课程提交包交付；公开仓库保留通用重建脚本与不含个人信息的数值证据。
+
+补核 Douban 全部四项指标：R@10 **0.13164±0.00051**、N@10 **0.18372±0.00015**、R@20 **0.18532±0.00092**、N@20 **0.18458±0.00050**；相对原文表5分别为 **−1.02%、−0.59%、−1.27%、−0.60%**。四项均值及每次成绩均略低于原文，结论是“数值接近，有残差”。@10 读自作者八位小数日志；四列均取同一个最佳测试 R@20 轮。
+
+新增训练历史分组分析（对应原文图2的研究思路）：Grocery 阈值4/7条，MovieLens 为35/94条，保留并列。MovieLens 稀疏组有2018名训练用户，仅14名测试用户，覆盖0.69%，不能外推为全体稀疏用户的普遍效果。分组只用训练计数，复用保存的成绩，不重新选模。
+
+覆盖审计见 research/report_verification_zh.md。原始层数、噪声及完整参数敏感性实验尚未重跑；α=0/1 消融不等同于原文图4的全部网格。
+
+重建数值与图表：
+
+    python scripts/summarize_results.py
+    python scripts/summarize_official_anchors.py
+    python scripts/analyze_sparsity_groups.py
+    python scripts/build_latex_blocks.py
+
+若有报告源码，可用下面命令更新数值标记块（不改正文）：
+
+    python scripts/build_latex_blocks.py --report report.tex
+
+编译需 XeLaTeX、ctex、pgfplots 和 Fandol 字体，连续编译两次解析引用。
+
+## 项目概况
+
 本项目复现 SIGIR 2025 论文 *Unveiling Contrastive Learning's Capability of Neighborhood Aggregation for Collaborative Filtering* 的 LightCCF 方法，并按课程要求在 ReChorus 2.0 中与 BPRMF、LightGCN 比较。课程数据为 ReChorus 的 `Grocery_and_Gourmet_Food` 和 `ML_1MTOPK`。此外保留作者原始代码与 Douban-book 数据，用于独立的论文原始协议核对。
 
 公开代码仓库不重新分发上游框架、论文作者代码或 MovieLens 原始数据。首次使用时运行下文的固定版本设置脚本获取它们；本地课程提交目录保留已运行数据与原始日志。

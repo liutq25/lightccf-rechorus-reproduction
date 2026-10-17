@@ -124,6 +124,7 @@ def main():
              ha='center', fontsize=9)
     fig.tight_layout(rect=(0, .05, 1, 1))
     fig.savefig(OUT / 'model_comparison.png', dpi=190)
+    fig.savefig(OUT / 'model_comparison.pdf')
     plt.close(fig)
 
     fig, axes = plt.subplots(1, 2, figsize=(10, 4.2))
@@ -140,8 +141,10 @@ def main():
         ax.legend(fontsize=8)
     fig.tight_layout()
     fig.savefig(OUT / 'na_ablation.png', dpi=190)
+    fig.savefig(OUT / 'na_ablation.pdf')
     plt.close(fig)
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.5))
+    learning_rows = []
     for ax, prefix, title in zip(axes, ('grocery', 'ml'),
                                  ('Amazon Grocery', 'MovieLens 1M TopK')):
         for model_name in ('bprmf', 'lightgcn', 'lightccf'):
@@ -150,6 +153,8 @@ def main():
             points = [json.loads(line) for line in history.read_text(encoding='utf-8').splitlines()]
             points = [point for point in points if 'dev' in point]
             label = all_runs[(name, 2023)]['model']
+            learning_rows.extend(dict(name=name, seed=2023, model=label, epoch=point['epoch'],
+                                      dev_ndcg20=point['dev']['NDCG@20']) for point in points)
             ax.plot([point['epoch'] for point in points],
                     [point['dev']['NDCG@20'] for point in points],
                     label=label, color=colors[label], linewidth=1.8)
@@ -160,7 +165,9 @@ def main():
         ax.legend(fontsize=8)
     fig.tight_layout()
     fig.savefig(OUT / 'learning_curves_seed2023.png', dpi=190)
+    fig.savefig(OUT / 'learning_curves_seed2023.pdf')
     plt.close(fig)
+    write_csv(OUT / 'learning_curves_seed2023.csv', learning_rows)
     print(f'Wrote {len(flat)} formal runs and {len(pairs)} paired comparisons to {OUT}')
 
 
