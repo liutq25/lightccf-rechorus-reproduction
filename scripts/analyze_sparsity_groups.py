@@ -87,17 +87,20 @@ def main():
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
+    from plot_style import use_chinese_font
+    use_chinese_font()
     colors = ('#4D789A', '#D58A55', '#3A9A85')
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.2))
-    for ax, prefix, title in zip(axes, ('grocery', 'ml'), ('Amazon Grocery', 'MovieLens 1M TopK')):
+    for ax, prefix, title in zip(axes, ('grocery', 'ml'), ('亚马逊食品数据', '电影评分数据')):
         for model, color in zip(LABELS, colors):
             selected = [next(r for r in summary if r['prefix'] == prefix
                              and r['model'] == model and r['group'] == group) for group in GROUPS]
             ax.errorbar(range(3), [r['NDCG@20_mean'] for r in selected],
                         yerr=[r['NDCG@20_sd'] for r in selected], capsize=3,
                         marker='o', color=color, label=model)
-        ax.set_xticks(range(3), [f"{g}\n(n={profiles[prefix]['groups'][g]['test_users']})" for g in GROUPS])
-        ax.set_ylabel('Test user-macro NDCG@20')
+        ax.set_xticks(range(3), [f"{label}\n（{profiles[prefix]['groups'][g]['test_users']}人）"
+                                for g, label in zip(GROUPS, ('稀疏组', '中等组', '活跃组'))])
+        ax.set_ylabel('测试 NDCG@20（用户宏平均）')
         ax.set_title(title)
         ax.grid(axis='y', alpha=.2)
         ax.legend(fontsize=8)

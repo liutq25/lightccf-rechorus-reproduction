@@ -1,0 +1,13 @@
+﻿alpha,tau,dev_ndcg20,best_epoch,epochs,is_new_validation_only_run,source
+0.1,0.28,0.09278800991976835,20,45,True,runs/extension/ml_alpha_0p1/seed_2023/result.json
+0.5,0.28,0.0861380644065369,35,60,True,runs/extension/ml_alpha_0p5/seed_2023/result.json
+2.5,0.28,0.07305416550064689,125,150,True,runs/extension/ml_alpha_2p5/seed_2023/result.json
+5.0,0.28,0.06750147059981176,105,130,True,runs/extension/ml_alpha_5p0/seed_2023/result.json
+10.0,0.28,0.06463062516376937,170,195,True,runs/extension/ml_alpha_10p0/seed_2023/result.json
+1.0,0.2,0.08188638001796253,65,90,True,runs/extension/ml_tau_0p20/seed_2023/result.json
+1.0,0.22,0.08131114480394466,65,90,True,runs/extension/ml_tau_0p22/seed_2023/result.json
+1.0,0.24,0.08244390929073232,65,90,True,runs/extension/ml_tau_0p24/seed_2023/result.json
+1.0,0.26,0.08228774777296874,65,90,True,runs/extension/ml_tau_0p26/seed_2023/result.json
+1.0,0.3,0.08148704603393837,45,70,True,runs/extension/ml_tau_0p30/seed_2023/result.json
+0.0,0.28,0.08910452846419865,30,55,False,runs/ablation/ml_lightccf_alpha0/seed_2023/result.json
+1.0,0.28,0.08079189731549874,65,90,False,runs/core/ml_lightccf/seed_2023/result.json

@@ -105,10 +105,12 @@ def main():
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
     import numpy as np
+    from plot_style import use_chinese_font
+    use_chinese_font()
     colors = {'BPRMF': '#4D789A', 'LightGCN': '#D58A55', 'LightCCF': '#3A9A85'}
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.5), sharey=False)
     for ax, prefix, title in zip(axes, ('grocery', 'ml'),
-                                 ('Amazon Grocery', 'MovieLens 1M TopK')):
+                                 ('亚马逊食品数据', '电影评分数据')):
         names = [f'{prefix}_{m}' for m in ('bprmf', 'lightgcn', 'lightccf')]
         s = [next(r for r in summary if r['name'] == n) for n in names]
         x = np.arange(3)
@@ -116,11 +118,11 @@ def main():
                yerr=[r['test_NDCG@20_sd'] for r in s], capsize=4,
                color=[colors[r['model']] for r in s], edgecolor='white')
         ax.set_xticks(x, [r['model'] for r in s])
-        ax.set_ylabel('Test user-macro NDCG@20')
+        ax.set_ylabel('测试 NDCG@20（用户宏平均）')
         ax.set_title(title)
         ax.grid(axis='y', alpha=.2)
         ax.set_axisbelow(True)
-    fig.text(.5, .01, 'Bars: mean of three training seeds; whiskers: sample standard deviation',
+    fig.text(.5, .01, '柱高：三个训练种子的均值；误差线：样本标准差',
              ha='center', fontsize=9)
     fig.tight_layout(rect=(0, .05, 1, 1))
     fig.savefig(OUT / 'model_comparison.png', dpi=190)
@@ -129,13 +131,13 @@ def main():
 
     fig, axes = plt.subplots(1, 2, figsize=(10, 4.2))
     for ax, prefix, title in zip(axes, ('grocery', 'ml'),
-                                 ('Amazon Grocery', 'MovieLens 1M TopK')):
+                                 ('亚马逊食品数据', '电影评分数据')):
         full = [all_runs[(f'{prefix}_lightccf', seed)]['test']['NDCG@20'] for seed in SEEDS]
         zero = [all_runs[(f'{prefix}_lightccf_alpha0', seed)]['test']['NDCG@20'] for seed in SEEDS]
         for s, a, b in zip(SEEDS, zero, full):
-            ax.plot([0, 1], [a, b], marker='o', alpha=.7, label=f'seed {s}')
-        ax.set_xticks([0, 1], ['Without NA', 'With NA'])
-        ax.set_ylabel('Test user-macro NDCG@20')
+            ax.plot([0, 1], [a, b], marker='o', alpha=.7, label=f'种子{s}')
+        ax.set_xticks([0, 1], ['关闭 NA', '开启 NA'])
+        ax.set_ylabel('测试 NDCG@20（用户宏平均）')
         ax.set_title(title)
         ax.grid(axis='y', alpha=.2)
         ax.legend(fontsize=8)
@@ -146,7 +148,7 @@ def main():
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.5))
     learning_rows = []
     for ax, prefix, title in zip(axes, ('grocery', 'ml'),
-                                 ('Amazon Grocery', 'MovieLens 1M TopK')):
+                                 ('亚马逊食品数据', '电影评分数据')):
         for model_name in ('bprmf', 'lightgcn', 'lightccf'):
             name = f'{prefix}_{model_name}'
             history = ROOT / 'runs' / 'core' / name / 'seed_2023' / 'history.jsonl'
@@ -159,8 +161,8 @@ def main():
                     [point['dev']['NDCG@20'] for point in points],
                     label=label, color=colors[label], linewidth=1.8)
         ax.set_title(title)
-        ax.set_xlabel('Epoch')
-        ax.set_ylabel('Validation user-macro NDCG@20')
+        ax.set_xlabel('训练轮数')
+        ax.set_ylabel('验证 NDCG@20（用户宏平均）')
         ax.grid(alpha=.2)
         ax.legend(fontsize=8)
     fig.tight_layout()

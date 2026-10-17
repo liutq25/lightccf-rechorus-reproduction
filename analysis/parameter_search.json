@@ -1,0 +1,403 @@
+{
+  "selection": {
+    "rule": "max seed-2023 validation NDCG@20; tie: smaller alpha then tau",
+    "selection_uses_test": false,
+    "candidates": [
+      {
+        "name": "ml_alpha_0p1",
+        "alpha": 0.1,
+        "tau": 0.28,
+        "dev": 0.09278800991976835,
+        "source": "runs/extension/ml_alpha_0p1/seed_2023/result.json",
+        "config": {
+          "model": "LightCCF",
+          "dataset": "ML_1MTOPK",
+          "n_layers": 0,
+          "emb_size": 64,
+          "tau": 0.28,
+          "ssl_weight": 0.1,
+          "reg_weight": 0.0001,
+          "l2": 0.0,
+          "batch_size": 2048,
+          "epoch": 200,
+          "early_stop": 25,
+          "eval_every": 5
+        }
+      },
+      {
+        "name": "ml_alpha_0p5",
+        "alpha": 0.5,
+        "tau": 0.28,
+        "dev": 0.0861380644065369,
+        "source": "runs/extension/ml_alpha_0p5/seed_2023/result.json",
+        "config": {
+          "model": "LightCCF",
+          "dataset": "ML_1MTOPK",
+          "n_layers": 0,
+          "emb_size": 64,
+          "tau": 0.28,
+          "ssl_weight": 0.5,
+          "reg_weight": 0.0001,
+          "l2": 0.0,
+          "batch_size": 2048,
+          "epoch": 200,
+          "early_stop": 25,
+          "eval_every": 5
+        }
+      },
+      {
+        "name": "ml_alpha_2p5",
+        "alpha": 2.5,
+        "tau": 0.28,
+        "dev": 0.07305416550064689,
+        "source": "runs/extension/ml_alpha_2p5/seed_2023/result.json",
+        "config": {
+          "model": "LightCCF",
+          "dataset": "ML_1MTOPK",
+          "n_layers": 0,
+          "emb_size": 64,
+          "tau": 0.28,
+          "ssl_weight": 2.5,
+          "reg_weight": 0.0001,
+          "l2": 0.0,
+          "batch_size": 2048,
+          "epoch": 200,
+          "early_stop": 25,
+          "eval_every": 5
+        }
+      },
+      {
+        "name": "ml_alpha_5p0",
+        "alpha": 5.0,
+        "tau": 0.28,
+        "dev": 0.06750147059981176,
+        "source": "runs/extension/ml_alpha_5p0/seed_2023/result.json",
+        "config": {
+          "model": "LightCCF",
+          "dataset": "ML_1MTOPK",
+          "n_layers": 0,
+          "emb_size": 64,
+          "tau": 0.28,
+          "ssl_weight": 5.0,
+          "reg_weight": 0.0001,
+          "l2": 0.0,
+          "batch_size": 2048,
+          "epoch": 200,
+          "early_stop": 25,
+          "eval_every": 5
+        }
+      },
+      {
+        "name": "ml_alpha_10p0",
+        "alpha": 10.0,
+        "tau": 0.28,
+        "dev": 0.06463062516376937,
+        "source": "runs/extension/ml_alpha_10p0/seed_2023/result.json",
+        "config": {
+          "model": "LightCCF",
+          "dataset": "ML_1MTOPK",
+          "n_layers": 0,
+          "emb_size": 64,
+          "tau": 0.28,
+          "ssl_weight": 10.0,
+          "reg_weight": 0.0001,
+          "l2": 0.0,
+          "batch_size": 2048,
+          "epoch": 200,
+          "early_stop": 25,
+          "eval_every": 5
+        }
+      },
+      {
+        "name": "ml_tau_0p20",
+        "alpha": 1.0,
+        "tau": 0.2,
+        "dev": 0.08188638001796253,
+        "source": "runs/extension/ml_tau_0p20/seed_2023/result.json",
+        "config": {
+          "model": "LightCCF",
+          "dataset": "ML_1MTOPK",
+          "n_layers": 0,
+          "emb_size": 64,
+          "tau": 0.2,
+          "ssl_weight": 1.0,
+          "reg_weight": 0.0001,
+          "l2": 0.0,
+          "batch_size": 2048,
+          "epoch": 200,
+          "early_stop": 25,
+          "eval_every": 5
+        }
+      },
+      {
+        "name": "ml_tau_0p22",
+        "alpha": 1.0,
+        "tau": 0.22,
+        "dev": 0.08131114480394466,
+        "source": "runs/extension/ml_tau_0p22/seed_2023/result.json",
+        "config": {
+          "model": "LightCCF",
+          "dataset": "ML_1MTOPK",
+          "n_layers": 0,
+          "emb_size": 64,
+          "tau": 0.22,
+          "ssl_weight": 1.0,
+          "reg_weight": 0.0001,
+          "l2": 0.0,
+          "batch_size": 2048,
+          "epoch": 200,
+          "early_stop": 25,
+          "eval_every": 5
+        }
+      },
+      {
+        "name": "ml_tau_0p24",
+        "alpha": 1.0,
+        "tau": 0.24,
+        "dev": 0.08244390929073232,
+        "source": "runs/extension/ml_tau_0p24/seed_2023/result.json",
+        "config": {
+          "model": "LightCCF",
+          "dataset": "ML_1MTOPK",
+          "n_layers": 0,
+          "emb_size": 64,
+          "tau": 0.24,
+          "ssl_weight": 1.0,
+          "reg_weight": 0.0001,
+          "l2": 0.0,
+          "batch_size": 2048,
+          "epoch": 200,
+          "early_stop": 25,
+          "eval_every": 5
+        }
+      },
+      {
+        "name": "ml_tau_0p26",
+        "alpha": 1.0,
+        "tau": 0.26,
+        "dev": 0.08228774777296874,
+        "source": "runs/extension/ml_tau_0p26/seed_2023/result.json",
+        "config": {
+          "model": "LightCCF",
+          "dataset": "ML_1MTOPK",
+          "n_layers": 0,
+          "emb_size": 64,
+          "tau": 0.26,
+          "ssl_weight": 1.0,
+          "reg_weight": 0.0001,
+          "l2": 0.0,
+          "batch_size": 2048,
+          "epoch": 200,
+          "early_stop": 25,
+          "eval_every": 5
+        }
+      },
+      {
+        "name": "ml_tau_0p30",
+        "alpha": 1.0,
+        "tau": 0.3,
+        "dev": 0.08148704603393837,
+        "source": "runs/extension/ml_tau_0p30/seed_2023/result.json",
+        "config": {
+          "model": "LightCCF",
+          "dataset": "ML_1MTOPK",
+          "n_layers": 0,
+          "emb_size": 64,
+          "tau": 0.3,
+          "ssl_weight": 1.0,
+          "reg_weight": 0.0001,
+          "l2": 0.0,
+          "batch_size": 2048,
+          "epoch": 200,
+          "early_stop": 25,
+          "eval_every": 5
+        }
+      },
+      {
+        "name": "ml_alpha0_existing",
+        "alpha": 0.0,
+        "tau": 0.28,
+        "dev": 0.08910452846419865,
+        "source": "runs/ablation/ml_lightccf_alpha0/seed_2023/result.json",
+        "config": {
+          "model": "LightCCF",
+          "dataset": "ML_1MTOPK",
+          "n_layers": 0,
+          "emb_size": 64,
+          "tau": 0.28,
+          "ssl_weight": 0.0,
+          "reg_weight": 0.0001,
+          "l2": 0.0,
+          "batch_size": 2048,
+          "epoch": 200,
+          "early_stop": 25,
+          "eval_every": 5
+        }
+      },
+      {
+        "name": "ml_full_existing",
+        "alpha": 1.0,
+        "tau": 0.28,
+        "dev": 0.08079189731549874,
+        "source": "runs/core/ml_lightccf/seed_2023/result.json",
+        "config": {
+          "model": "LightCCF",
+          "dataset": "ML_1MTOPK",
+          "n_layers": 0,
+          "emb_size": 64,
+          "tau": 0.28,
+          "ssl_weight": 1.0,
+          "reg_weight": 0.0001,
+          "l2": 0.0,
+          "batch_size": 2048,
+          "epoch": 200,
+          "early_stop": 25,
+          "eval_every": 5
+        }
+      }
+    ],
+    "selected": {
+      "name": "ml_alpha_0p1",
+      "alpha": 0.1,
+      "tau": 0.28,
+      "dev": 0.09278800991976835,
+      "source": "runs/extension/ml_alpha_0p1/seed_2023/result.json",
+      "config": {
+        "model": "LightCCF",
+        "dataset": "ML_1MTOPK",
+        "n_layers": 0,
+        "emb_size": 64,
+        "tau": 0.28,
+        "ssl_weight": 0.1,
+        "reg_weight": 0.0001,
+        "l2": 0.0,
+        "batch_size": 2048,
+        "epoch": 200,
+        "early_stop": 25,
+        "eval_every": 5
+      }
+    },
+    "post_hoc_exploration": true,
+    "grid_type": "two one-dimensional slices, not a joint grid"
+  },
+  "candidates": [
+    {
+      "alpha": 0.1,
+      "tau": 0.28,
+      "dev_ndcg20": 0.09278800991976835,
+      "best_epoch": 20,
+      "epochs": 45,
+      "is_new_validation_only_run": true,
+      "source": "runs/extension/ml_alpha_0p1/seed_2023/result.json"
+    },
+    {
+      "alpha": 0.5,
+      "tau": 0.28,
+      "dev_ndcg20": 0.0861380644065369,
+      "best_epoch": 35,
+      "epochs": 60,
+      "is_new_validation_only_run": true,
+      "source": "runs/extension/ml_alpha_0p5/seed_2023/result.json"
+    },
+    {
+      "alpha": 2.5,
+      "tau": 0.28,
+      "dev_ndcg20": 0.07305416550064689,
+      "best_epoch": 125,
+      "epochs": 150,
+      "is_new_validation_only_run": true,
+      "source": "runs/extension/ml_alpha_2p5/seed_2023/result.json"
+    },
+    {
+      "alpha": 5.0,
+      "tau": 0.28,
+      "dev_ndcg20": 0.06750147059981176,
+      "best_epoch": 105,
+      "epochs": 130,
+      "is_new_validation_only_run": true,
+      "source": "runs/extension/ml_alpha_5p0/seed_2023/result.json"
+    },
+    {
+      "alpha": 10.0,
+      "tau": 0.28,
+      "dev_ndcg20": 0.06463062516376937,
+      "best_epoch": 170,
+      "epochs": 195,
+      "is_new_validation_only_run": true,
+      "source": "runs/extension/ml_alpha_10p0/seed_2023/result.json"
+    },
+    {
+      "alpha": 1.0,
+      "tau": 0.2,
+      "dev_ndcg20": 0.08188638001796253,
+      "best_epoch": 65,
+      "epochs": 90,
+      "is_new_validation_only_run": true,
+      "source": "runs/extension/ml_tau_0p20/seed_2023/result.json"
+    },
+    {
+      "alpha": 1.0,
+      "tau": 0.22,
+      "dev_ndcg20": 0.08131114480394466,
+      "best_epoch": 65,
+      "epochs": 90,
+      "is_new_validation_only_run": true,
+      "source": "runs/extension/ml_tau_0p22/seed_2023/result.json"
+    },
+    {
+      "alpha": 1.0,
+      "tau": 0.24,
+      "dev_ndcg20": 0.08244390929073232,
+      "best_epoch": 65,
+      "epochs": 90,
+      "is_new_validation_only_run": true,
+      "source": "runs/extension/ml_tau_0p24/seed_2023/result.json"
+    },
+    {
+      "alpha": 1.0,
+      "tau": 0.26,
+      "dev_ndcg20": 0.08228774777296874,
+      "best_epoch": 65,
+      "epochs": 90,
+      "is_new_validation_only_run": true,
+      "source": "runs/extension/ml_tau_0p26/seed_2023/result.json"
+    },
+    {
+      "alpha": 1.0,
+      "tau": 0.3,
+      "dev_ndcg20": 0.08148704603393837,
+      "best_epoch": 45,
+      "epochs": 70,
+      "is_new_validation_only_run": true,
+      "source": "runs/extension/ml_tau_0p30/seed_2023/result.json"
+    },
+    {
+      "alpha": 0.0,
+      "tau": 0.28,
+      "dev_ndcg20": 0.08910452846419865,
+      "best_epoch": 30,
+      "epochs": 55,
+      "is_new_validation_only_run": false,
+      "source": "runs/ablation/ml_lightccf_alpha0/seed_2023/result.json"
+    },
+    {
+      "alpha": 1.0,
+      "tau": 0.28,
+      "dev_ndcg20": 0.08079189731549874,
+      "best_epoch": 65,
+      "epochs": 90,
+      "is_new_validation_only_run": false,
+      "source": "runs/core/ml_lightccf/seed_2023/result.json"
+    }
+  ],
+  "selected": {
+    "alpha": 0.1,
+    "tau": 0.28,
+    "dev_ndcg20": 0.09278800991976835,
+    "best_epoch": 20,
+    "epochs": 45,
+    "is_new_validation_only_run": true,
+    "source": "runs/extension/ml_alpha_0p1/seed_2023/result.json"
+  },
+  "new_validation_only_runs": 10
+}

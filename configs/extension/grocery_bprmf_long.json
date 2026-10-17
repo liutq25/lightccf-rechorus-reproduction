@@ -1,0 +1,10 @@
+{
+  "model": "BPRMF",
+  "dataset": "Grocery_and_Gourmet_Food",
+  "emb_size": 64,
+  "l2": 1e-06,
+  "batch_size": 2048,
+  "epoch": 1000,
+  "early_stop": 25,
+  "eval_every": 5
+}

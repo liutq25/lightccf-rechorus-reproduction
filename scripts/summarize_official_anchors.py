@@ -95,6 +95,8 @@ def main():
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
+    from plot_style import use_chinese_font
+    use_chinese_font()
     fig, ax = plt.subplots(figsize=(8.8, 3.5))
     for x, metric in enumerate(METRICS):
         item = summary['metrics'][metric]
@@ -103,9 +105,10 @@ def main():
                     color='#27856F', markersize=7)
         ax.text(x, item['mean'] / item['paper'] - .011,
                 f"{item['relative_difference_percent']:+.2f}%", ha='center', fontsize=9)
-    ax.axhline(1, color='#A45435', linestyle='--', label='Paper Table 5 = 1.0')
-    ax.set_xticks(range(4), METRICS)
-    ax.set_ylabel('Local mean / paper value')
+    ax.axhline(1, color='#A45435', linestyle='--', label='原文表5 = 1.0')
+    ax.set_xticks(range(4), ['召回@10', 'NDCG@10', '召回@20', 'NDCG@20'])
+    ax.set_ylabel('本机均值 / 原文')
+    ax.set_title('豆瓣图书：五次原始协议实验与原文对照')
     ax.set_ylim(min(v['mean'] / v['paper'] for v in summary['metrics'].values()) - .028, 1.012)
     ax.grid(axis='y', alpha=.22)
     ax.legend(loc='upper left', fontsize=9)
