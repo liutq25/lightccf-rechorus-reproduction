@@ -311,6 +311,8 @@ def main():
     if args.report:
         source = args.report.read_text(encoding='utf-8')
         for name, block in blocks.items():
+            if '% BEGIN AUTO '+name+'\n' not in source:
+                continue  # Historical figures may be replaced by later audited evidence.
             pattern = re.compile(r'(% BEGIN AUTO ' + re.escape(name) + r'\n).*?(% END AUTO ' + re.escape(name) + r')', re.S)
             source, count = pattern.subn(lambda match: match[1] + block + '\n' + match[2], source)
             if count != 1:

@@ -1,6 +1,8 @@
 """Compile the standalone Chinese report with XeLaTeX until references settle."""
 from pathlib import Path
 import argparse
+import hashlib
+import json
 import shutil
 import subprocess
 
@@ -12,6 +14,7 @@ def main():
     parser.add_argument('--source', type=Path, default=ROOT / '复现报告.tex')
     args = parser.parse_args()
     source = args.source.resolve(strict=True)
+    source_sha256 = hashlib.sha256(source.read_bytes()).hexdigest()
     if source.suffix.lower() != '.tex':
         raise ValueError('需要 .tex 源文件')
     engine = shutil.which('xelatex')
@@ -42,6 +45,13 @@ def main():
     for issue in ('Missing character:', 'undefined references'):
         if issue in final_log:
             raise RuntimeError(f'PDF生成，但存在需要修复的诊断：{issue}')
+    if hashlib.sha256(source.read_bytes()).hexdigest() != source_sha256:
+        raise RuntimeError('编译过程中源码发生变化，请重新编译。')
+    proof = ROOT / 'analysis/report_compile.json'
+    proof.parent.mkdir(exist_ok=True)
+    proof.write_text(json.dumps(dict(source_name=source.name, tex_sha256=source_sha256,
+                                    pdf_sha256=hashlib.sha256(destination.read_bytes()).hexdigest(),
+                                    passes=pass_number), indent=2), encoding='utf-8')
     print(f'XeLaTeX编译成功（{pass_number}次）：{destination}')
 
 

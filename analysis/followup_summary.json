@@ -1,0 +1,1393 @@
+{
+  "equal_trial_count_per_model": 4,
+  "search_seed": 2023,
+  "confirmation_seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "reused_candidates": 9,
+  "new_runs": {
+    "formal": 30,
+    "validation_only": 15
+  },
+  "total_formal": 71,
+  "total_validation_only": 25,
+  "selections": [
+    {
+      "dataset_prefix": "grocery",
+      "model": "BPRMF",
+      "candidates": [
+        {
+          "id": "lr0.0005_l21e-07",
+          "config": {
+            "model": "BPRMF",
+            "dataset": "Grocery_and_Gourmet_Food",
+            "emb_size": 64,
+            "l2": 1e-07,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.0005
+          },
+          "dev": 0.0334810325051111,
+          "source": "runs/followup_20261101/search_grocery_bprmf_lr0.0005_l21e-07/seed_2023/result.json",
+          "reused": false
+        },
+        {
+          "id": "lr0.0005_l21e-06",
+          "config": {
+            "model": "BPRMF",
+            "dataset": "Grocery_and_Gourmet_Food",
+            "emb_size": 64,
+            "l2": 1e-06,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.0005
+          },
+          "dev": 0.03529640127846476,
+          "source": "runs/followup_20261101/search_grocery_bprmf_lr0.0005_l21e-06/seed_2023/result.json",
+          "reused": false
+        },
+        {
+          "id": "lr0.001_l21e-07",
+          "config": {
+            "model": "BPRMF",
+            "dataset": "Grocery_and_Gourmet_Food",
+            "emb_size": 64,
+            "l2": 1e-07,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.03251856509800288,
+          "source": "runs/followup_20261101/search_grocery_bprmf_lr0.001_l21e-07/seed_2023/result.json",
+          "reused": false
+        },
+        {
+          "id": "lr0.001_l21e-06",
+          "config": {
+            "model": "BPRMF",
+            "dataset": "Grocery_and_Gourmet_Food",
+            "emb_size": 64,
+            "l2": 1e-06,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.037765532396188635,
+          "source": "runs/extension/grocery_bprmf_long/seed_2023/result.json",
+          "reused": true
+        }
+      ],
+      "selected": {
+        "id": "lr0.001_l21e-06",
+        "config": {
+          "model": "BPRMF",
+          "dataset": "Grocery_and_Gourmet_Food",
+          "emb_size": 64,
+          "l2": 1e-06,
+          "batch_size": 2048,
+          "epoch": 1000,
+          "early_stop": 25,
+          "eval_every": 5,
+          "lr": 0.001
+        },
+        "dev": 0.037765532396188635,
+        "source": "runs/extension/grocery_bprmf_long/seed_2023/result.json",
+        "reused": true
+      },
+      "selection_uses_test": false,
+      "search_seed": 2023,
+      "confirmation_seeds": [
+        2026,
+        2027,
+        2028
+      ],
+      "rule": "max validation NDCG@20; exact tie lexicographic candidate ID"
+    },
+    {
+      "dataset_prefix": "grocery",
+      "model": "LightGCN",
+      "candidates": [
+        {
+          "id": "layers1_l21e-07",
+          "config": {
+            "model": "LightGCN",
+            "dataset": "Grocery_and_Gourmet_Food",
+            "n_layers": 1,
+            "emb_size": 64,
+            "l2": 1e-07,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.039338069689038024,
+          "source": "runs/followup_20261101/search_grocery_lightgcn_layers1_l21e-07/seed_2023/result.json",
+          "reused": false
+        },
+        {
+          "id": "layers1_l21e-06",
+          "config": {
+            "model": "LightGCN",
+            "dataset": "Grocery_and_Gourmet_Food",
+            "n_layers": 1,
+            "emb_size": 64,
+            "l2": 1e-06,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.0404026075688475,
+          "source": "runs/followup_20261101/search_grocery_lightgcn_layers1_l21e-06/seed_2023/result.json",
+          "reused": false
+        },
+        {
+          "id": "layers3_l21e-07",
+          "config": {
+            "model": "LightGCN",
+            "dataset": "Grocery_and_Gourmet_Food",
+            "n_layers": 3,
+            "emb_size": 64,
+            "l2": 1e-07,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.0423303424279902,
+          "source": "runs/followup_20261101/search_grocery_lightgcn_layers3_l21e-07/seed_2023/result.json",
+          "reused": false
+        },
+        {
+          "id": "layers3_l21e-06",
+          "config": {
+            "model": "LightGCN",
+            "dataset": "Grocery_and_Gourmet_Food",
+            "n_layers": 3,
+            "emb_size": 64,
+            "l2": 1e-06,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.040727235145662205,
+          "source": "runs/extension/grocery_lightgcn_long/seed_2023/result.json",
+          "reused": true
+        }
+      ],
+      "selected": {
+        "id": "layers3_l21e-07",
+        "config": {
+          "model": "LightGCN",
+          "dataset": "Grocery_and_Gourmet_Food",
+          "n_layers": 3,
+          "emb_size": 64,
+          "l2": 1e-07,
+          "batch_size": 2048,
+          "epoch": 1000,
+          "early_stop": 25,
+          "eval_every": 5,
+          "lr": 0.001
+        },
+        "dev": 0.0423303424279902,
+        "source": "runs/followup_20261101/search_grocery_lightgcn_layers3_l21e-07/seed_2023/result.json",
+        "reused": false
+      },
+      "selection_uses_test": false,
+      "search_seed": 2023,
+      "confirmation_seeds": [
+        2026,
+        2027,
+        2028
+      ],
+      "rule": "max validation NDCG@20; exact tie lexicographic candidate ID"
+    },
+    {
+      "dataset_prefix": "grocery",
+      "model": "LightCCF",
+      "candidates": [
+        {
+          "id": "alpha0.1",
+          "config": {
+            "model": "LightCCF",
+            "dataset": "Grocery_and_Gourmet_Food",
+            "n_layers": 0,
+            "emb_size": 64,
+            "tau": 0.28,
+            "ssl_weight": 0.1,
+            "reg_weight": 0.0001,
+            "l2": 0.0,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.04750859347250628,
+          "source": "runs/followup_20261101/search_grocery_lightccf_alpha0.1/seed_2023/result.json",
+          "reused": false
+        },
+        {
+          "id": "alpha0.5",
+          "config": {
+            "model": "LightCCF",
+            "dataset": "Grocery_and_Gourmet_Food",
+            "n_layers": 0,
+            "emb_size": 64,
+            "tau": 0.28,
+            "ssl_weight": 0.5,
+            "reg_weight": 0.0001,
+            "l2": 0.0,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.04986456844451063,
+          "source": "runs/followup_20261101/search_grocery_lightccf_alpha0.5/seed_2023/result.json",
+          "reused": false
+        },
+        {
+          "id": "alpha1",
+          "config": {
+            "model": "LightCCF",
+            "dataset": "Grocery_and_Gourmet_Food",
+            "n_layers": 0,
+            "emb_size": 64,
+            "tau": 0.28,
+            "ssl_weight": 1.0,
+            "reg_weight": 0.0001,
+            "l2": 0.0,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.0501695482316633,
+          "source": "runs/extension/grocery_lightccf_long/seed_2023/result.json",
+          "reused": true
+        },
+        {
+          "id": "alpha2.5",
+          "config": {
+            "model": "LightCCF",
+            "dataset": "Grocery_and_Gourmet_Food",
+            "n_layers": 0,
+            "emb_size": 64,
+            "tau": 0.28,
+            "ssl_weight": 2.5,
+            "reg_weight": 0.0001,
+            "l2": 0.0,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.05008443113605958,
+          "source": "runs/followup_20261101/search_grocery_lightccf_alpha2.5/seed_2023/result.json",
+          "reused": false
+        }
+      ],
+      "selected": {
+        "id": "alpha1",
+        "config": {
+          "model": "LightCCF",
+          "dataset": "Grocery_and_Gourmet_Food",
+          "n_layers": 0,
+          "emb_size": 64,
+          "tau": 0.28,
+          "ssl_weight": 1.0,
+          "reg_weight": 0.0001,
+          "l2": 0.0,
+          "batch_size": 2048,
+          "epoch": 1000,
+          "early_stop": 25,
+          "eval_every": 5,
+          "lr": 0.001
+        },
+        "dev": 0.0501695482316633,
+        "source": "runs/extension/grocery_lightccf_long/seed_2023/result.json",
+        "reused": true
+      },
+      "selection_uses_test": false,
+      "search_seed": 2023,
+      "confirmation_seeds": [
+        2026,
+        2027,
+        2028
+      ],
+      "rule": "max validation NDCG@20; exact tie lexicographic candidate ID"
+    },
+    {
+      "dataset_prefix": "ml",
+      "model": "BPRMF",
+      "candidates": [
+        {
+          "id": "lr0.0005_l21e-07",
+          "config": {
+            "model": "BPRMF",
+            "dataset": "ML_1MTOPK",
+            "emb_size": 64,
+            "l2": 1e-07,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.0005
+          },
+          "dev": 0.09142205380684079,
+          "source": "runs/followup_20261101/search_ml_bprmf_lr0.0005_l21e-07/seed_2023/result.json",
+          "reused": false
+        },
+        {
+          "id": "lr0.0005_l21e-06",
+          "config": {
+            "model": "BPRMF",
+            "dataset": "ML_1MTOPK",
+            "emb_size": 64,
+            "l2": 1e-06,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.0005
+          },
+          "dev": 0.09161402039021008,
+          "source": "runs/followup_20261101/search_ml_bprmf_lr0.0005_l21e-06/seed_2023/result.json",
+          "reused": false
+        },
+        {
+          "id": "lr0.001_l21e-07",
+          "config": {
+            "model": "BPRMF",
+            "dataset": "ML_1MTOPK",
+            "emb_size": 64,
+            "l2": 1e-07,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.09134147128387142,
+          "source": "runs/followup_20261101/search_ml_bprmf_lr0.001_l21e-07/seed_2023/result.json",
+          "reused": false
+        },
+        {
+          "id": "lr0.001_l21e-06",
+          "config": {
+            "model": "BPRMF",
+            "dataset": "ML_1MTOPK",
+            "emb_size": 64,
+            "l2": 1e-06,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.09002441753687962,
+          "source": "runs/core/ml_bprmf/seed_2023/result.json",
+          "reused": true
+        }
+      ],
+      "selected": {
+        "id": "lr0.0005_l21e-06",
+        "config": {
+          "model": "BPRMF",
+          "dataset": "ML_1MTOPK",
+          "emb_size": 64,
+          "l2": 1e-06,
+          "batch_size": 2048,
+          "epoch": 1000,
+          "early_stop": 25,
+          "eval_every": 5,
+          "lr": 0.0005
+        },
+        "dev": 0.09161402039021008,
+        "source": "runs/followup_20261101/search_ml_bprmf_lr0.0005_l21e-06/seed_2023/result.json",
+        "reused": false
+      },
+      "selection_uses_test": false,
+      "search_seed": 2023,
+      "confirmation_seeds": [
+        2026,
+        2027,
+        2028
+      ],
+      "rule": "max validation NDCG@20; exact tie lexicographic candidate ID"
+    },
+    {
+      "dataset_prefix": "ml",
+      "model": "LightGCN",
+      "candidates": [
+        {
+          "id": "layers1_l21e-07",
+          "config": {
+            "model": "LightGCN",
+            "dataset": "ML_1MTOPK",
+            "n_layers": 1,
+            "emb_size": 64,
+            "l2": 1e-07,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.0920408793989836,
+          "source": "runs/followup_20261101/search_ml_lightgcn_layers1_l21e-07/seed_2023/result.json",
+          "reused": false
+        },
+        {
+          "id": "layers1_l21e-06",
+          "config": {
+            "model": "LightGCN",
+            "dataset": "ML_1MTOPK",
+            "n_layers": 1,
+            "emb_size": 64,
+            "l2": 1e-06,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.0936809717755184,
+          "source": "runs/followup_20261101/search_ml_lightgcn_layers1_l21e-06/seed_2023/result.json",
+          "reused": false
+        },
+        {
+          "id": "layers3_l21e-07",
+          "config": {
+            "model": "LightGCN",
+            "dataset": "ML_1MTOPK",
+            "n_layers": 3,
+            "emb_size": 64,
+            "l2": 1e-07,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.09412048571128095,
+          "source": "runs/followup_20261101/search_ml_lightgcn_layers3_l21e-07/seed_2023/result.json",
+          "reused": false
+        },
+        {
+          "id": "layers3_l21e-06",
+          "config": {
+            "model": "LightGCN",
+            "dataset": "ML_1MTOPK",
+            "n_layers": 3,
+            "emb_size": 64,
+            "l2": 1e-06,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.09423997216881305,
+          "source": "runs/core/ml_lightgcn/seed_2023/result.json",
+          "reused": true
+        }
+      ],
+      "selected": {
+        "id": "layers3_l21e-06",
+        "config": {
+          "model": "LightGCN",
+          "dataset": "ML_1MTOPK",
+          "n_layers": 3,
+          "emb_size": 64,
+          "l2": 1e-06,
+          "batch_size": 2048,
+          "epoch": 1000,
+          "early_stop": 25,
+          "eval_every": 5,
+          "lr": 0.001
+        },
+        "dev": 0.09423997216881305,
+        "source": "runs/core/ml_lightgcn/seed_2023/result.json",
+        "reused": true
+      },
+      "selection_uses_test": false,
+      "search_seed": 2023,
+      "confirmation_seeds": [
+        2026,
+        2027,
+        2028
+      ],
+      "rule": "max validation NDCG@20; exact tie lexicographic candidate ID"
+    },
+    {
+      "dataset_prefix": "ml",
+      "model": "LightCCF",
+      "candidates": [
+        {
+          "id": "alpha0.1",
+          "config": {
+            "model": "LightCCF",
+            "dataset": "ML_1MTOPK",
+            "n_layers": 0,
+            "emb_size": 64,
+            "tau": 0.28,
+            "ssl_weight": 0.1,
+            "reg_weight": 0.0001,
+            "l2": 0.0,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.09278800991976835,
+          "source": "runs/extension/ml_alpha_0p1/seed_2023/result.json",
+          "reused": true
+        },
+        {
+          "id": "alpha0.5",
+          "config": {
+            "model": "LightCCF",
+            "dataset": "ML_1MTOPK",
+            "n_layers": 0,
+            "emb_size": 64,
+            "tau": 0.28,
+            "ssl_weight": 0.5,
+            "reg_weight": 0.0001,
+            "l2": 0.0,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.0861380644065369,
+          "source": "runs/extension/ml_alpha_0p5/seed_2023/result.json",
+          "reused": true
+        },
+        {
+          "id": "alpha1",
+          "config": {
+            "model": "LightCCF",
+            "dataset": "ML_1MTOPK",
+            "n_layers": 0,
+            "emb_size": 64,
+            "tau": 0.28,
+            "ssl_weight": 1.0,
+            "reg_weight": 0.0001,
+            "l2": 0.0,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.08079189731549874,
+          "source": "runs/core/ml_lightccf/seed_2023/result.json",
+          "reused": true
+        },
+        {
+          "id": "alpha2.5",
+          "config": {
+            "model": "LightCCF",
+            "dataset": "ML_1MTOPK",
+            "n_layers": 0,
+            "emb_size": 64,
+            "tau": 0.28,
+            "ssl_weight": 2.5,
+            "reg_weight": 0.0001,
+            "l2": 0.0,
+            "batch_size": 2048,
+            "epoch": 1000,
+            "early_stop": 25,
+            "eval_every": 5,
+            "lr": 0.001
+          },
+          "dev": 0.07305416550064689,
+          "source": "runs/extension/ml_alpha_2p5/seed_2023/result.json",
+          "reused": true
+        }
+      ],
+      "selected": {
+        "id": "alpha0.1",
+        "config": {
+          "model": "LightCCF",
+          "dataset": "ML_1MTOPK",
+          "n_layers": 0,
+          "emb_size": 64,
+          "tau": 0.28,
+          "ssl_weight": 0.1,
+          "reg_weight": 0.0001,
+          "l2": 0.0,
+          "batch_size": 2048,
+          "epoch": 1000,
+          "early_stop": 25,
+          "eval_every": 5,
+          "lr": 0.001
+        },
+        "dev": 0.09278800991976835,
+        "source": "runs/extension/ml_alpha_0p1/seed_2023/result.json",
+        "reused": true
+      },
+      "selection_uses_test": false,
+      "search_seed": 2023,
+      "confirmation_seeds": [
+        2026,
+        2027,
+        2028
+      ],
+      "rule": "max validation NDCG@20; exact tie lexicographic candidate ID"
+    }
+  ],
+  "confirmation": {
+    "grocery_BPRMF": {
+      "selected_id": "lr0.001_l21e-06",
+      "config": {
+        "model": "BPRMF",
+        "dataset": "Grocery_and_Gourmet_Food",
+        "emb_size": 64,
+        "l2": 1e-06,
+        "batch_size": 2048,
+        "epoch": 1000,
+        "early_stop": 25,
+        "eval_every": 5,
+        "lr": 0.001
+      },
+      "seeds": [
+        2026,
+        2027,
+        2028
+      ],
+      "best_epochs": [
+        55,
+        50,
+        105
+      ],
+      "epochs": [
+        80,
+        75,
+        130
+      ],
+      "test": {
+        "Recall@10": {
+          "mean": 0.03798560497695434,
+          "sample_sd": 0.0004379197947911315
+        },
+        "NDCG@10": {
+          "mean": 0.02043981362395992,
+          "sample_sd": 0.000213257793199615
+        },
+        "Recall@20": {
+          "mean": 0.05973707513112186,
+          "sample_sd": 0.0003539372265313453
+        },
+        "NDCG@20": {
+          "mean": 0.025918666198634685,
+          "sample_sd": 0.00023889652630960912
+        }
+      },
+      "mean_epoch_seconds": 0.241773852927431,
+      "hit_cap": 0,
+      "sources": [
+        "runs/followup_20261101/confirm_grocery_bprmf/seed_2026/result.json",
+        "runs/followup_20261101/confirm_grocery_bprmf/seed_2027/result.json",
+        "runs/followup_20261101/confirm_grocery_bprmf/seed_2028/result.json"
+      ]
+    },
+    "grocery_LightGCN": {
+      "selected_id": "layers3_l21e-07",
+      "config": {
+        "model": "LightGCN",
+        "dataset": "Grocery_and_Gourmet_Food",
+        "n_layers": 3,
+        "emb_size": 64,
+        "l2": 1e-07,
+        "batch_size": 2048,
+        "epoch": 1000,
+        "early_stop": 25,
+        "eval_every": 5,
+        "lr": 0.001
+      },
+      "seeds": [
+        2026,
+        2027,
+        2028
+      ],
+      "best_epochs": [
+        215,
+        295,
+        280
+      ],
+      "epochs": [
+        240,
+        320,
+        305
+      ],
+      "test": {
+        "Recall@10": {
+          "mean": 0.044524669073405534,
+          "sample_sd": 0.0008993620925158757
+        },
+        "NDCG@10": {
+          "mean": 0.022881985433068318,
+          "sample_sd": 0.0005501954083719407
+        },
+        "Recall@20": {
+          "mean": 0.06922780010444338,
+          "sample_sd": 0.0021500407512948893
+        },
+        "NDCG@20": {
+          "mean": 0.02908875670614125,
+          "sample_sd": 0.000850211108880257
+        }
+      },
+      "mean_epoch_seconds": 1.307357471732775,
+      "hit_cap": 0,
+      "sources": [
+        "runs/followup_20261101/confirm_grocery_lightgcn/seed_2026/result.json",
+        "runs/followup_20261101/confirm_grocery_lightgcn/seed_2027/result.json",
+        "runs/followup_20261101/confirm_grocery_lightgcn/seed_2028/result.json"
+      ]
+    },
+    "grocery_LightCCF": {
+      "selected_id": "alpha1",
+      "config": {
+        "model": "LightCCF",
+        "dataset": "Grocery_and_Gourmet_Food",
+        "n_layers": 0,
+        "emb_size": 64,
+        "tau": 0.28,
+        "ssl_weight": 1.0,
+        "reg_weight": 0.0001,
+        "l2": 0.0,
+        "batch_size": 2048,
+        "epoch": 1000,
+        "early_stop": 25,
+        "eval_every": 5,
+        "lr": 0.001
+      },
+      "seeds": [
+        2026,
+        2027,
+        2028
+      ],
+      "best_epochs": [
+        90,
+        155,
+        160
+      ],
+      "epochs": [
+        115,
+        180,
+        185
+      ],
+      "test": {
+        "Recall@10": {
+          "mean": 0.04877051971936516,
+          "sample_sd": 0.00094628730941011
+        },
+        "NDCG@10": {
+          "mean": 0.02625080683847375,
+          "sample_sd": 0.000539437161385511
+        },
+        "Recall@20": {
+          "mean": 0.07279249824035601,
+          "sample_sd": 0.002896567178024449
+        },
+        "NDCG@20": {
+          "mean": 0.0322877517577454,
+          "sample_sd": 0.0009188465178673202
+        }
+      },
+      "mean_epoch_seconds": 0.5523016729463116,
+      "hit_cap": 0,
+      "sources": [
+        "runs/followup_20261101/confirm_grocery_lightccf/seed_2026/result.json",
+        "runs/followup_20261101/confirm_grocery_lightccf/seed_2027/result.json",
+        "runs/followup_20261101/confirm_grocery_lightccf/seed_2028/result.json"
+      ]
+    },
+    "ml_BPRMF": {
+      "selected_id": "lr0.0005_l21e-06",
+      "config": {
+        "model": "BPRMF",
+        "dataset": "ML_1MTOPK",
+        "emb_size": 64,
+        "l2": 1e-06,
+        "batch_size": 2048,
+        "epoch": 1000,
+        "early_stop": 25,
+        "eval_every": 5,
+        "lr": 0.0005
+      },
+      "seeds": [
+        2026,
+        2027,
+        2028
+      ],
+      "best_epochs": [
+        45,
+        30,
+        55
+      ],
+      "epochs": [
+        70,
+        55,
+        80
+      ],
+      "test": {
+        "Recall@10": {
+          "mean": 0.06713917383324272,
+          "sample_sd": 0.001743481445776864
+        },
+        "NDCG@10": {
+          "mean": 0.08536654450758797,
+          "sample_sd": 0.0015944047216021162
+        },
+        "Recall@20": {
+          "mean": 0.10633467622483864,
+          "sample_sd": 0.0035947885816288564
+        },
+        "NDCG@20": {
+          "mean": 0.09413161233118285,
+          "sample_sd": 0.0026135163298736503
+        }
+      },
+      "mean_epoch_seconds": 1.0780670629648683,
+      "hit_cap": 0,
+      "sources": [
+        "runs/followup_20261101/confirm_ml_bprmf/seed_2026/result.json",
+        "runs/followup_20261101/confirm_ml_bprmf/seed_2027/result.json",
+        "runs/followup_20261101/confirm_ml_bprmf/seed_2028/result.json"
+      ]
+    },
+    "ml_LightGCN": {
+      "selected_id": "layers3_l21e-06",
+      "config": {
+        "model": "LightGCN",
+        "dataset": "ML_1MTOPK",
+        "n_layers": 3,
+        "emb_size": 64,
+        "l2": 1e-06,
+        "batch_size": 2048,
+        "epoch": 1000,
+        "early_stop": 25,
+        "eval_every": 5,
+        "lr": 0.001
+      },
+      "seeds": [
+        2026,
+        2027,
+        2028
+      ],
+      "best_epochs": [
+        95,
+        45,
+        45
+      ],
+      "epochs": [
+        120,
+        70,
+        70
+      ],
+      "test": {
+        "Recall@10": {
+          "mean": 0.06778194900024158,
+          "sample_sd": 0.005929317497467291
+        },
+        "NDCG@10": {
+          "mean": 0.08436640007160412,
+          "sample_sd": 0.004346548331751383
+        },
+        "Recall@20": {
+          "mean": 0.11162466363402425,
+          "sample_sd": 0.002318154731618192
+        },
+        "NDCG@20": {
+          "mean": 0.09449857028860004,
+          "sample_sd": 0.0013148759182413747
+        }
+      },
+      "mean_epoch_seconds": 18.26109404277775,
+      "hit_cap": 0,
+      "sources": [
+        "runs/followup_20261101/confirm_ml_lightgcn/seed_2026/result.json",
+        "runs/followup_20261101/confirm_ml_lightgcn/seed_2027/result.json",
+        "runs/followup_20261101/confirm_ml_lightgcn/seed_2028/result.json"
+      ]
+    },
+    "ml_LightCCF": {
+      "selected_id": "alpha0.1",
+      "config": {
+        "model": "LightCCF",
+        "dataset": "ML_1MTOPK",
+        "n_layers": 0,
+        "emb_size": 64,
+        "tau": 0.28,
+        "ssl_weight": 0.1,
+        "reg_weight": 0.0001,
+        "l2": 0.0,
+        "batch_size": 2048,
+        "epoch": 1000,
+        "early_stop": 25,
+        "eval_every": 5,
+        "lr": 0.001
+      },
+      "seeds": [
+        2026,
+        2027,
+        2028
+      ],
+      "best_epochs": [
+        15,
+        10,
+        20
+      ],
+      "epochs": [
+        40,
+        35,
+        45
+      ],
+      "test": {
+        "Recall@10": {
+          "mean": 0.059516105507988706,
+          "sample_sd": 0.015357541569125248
+        },
+        "NDCG@10": {
+          "mean": 0.07480835712751922,
+          "sample_sd": 0.007858990137046343
+        },
+        "Recall@20": {
+          "mean": 0.09835694067376098,
+          "sample_sd": 0.015366102302780498
+        },
+        "NDCG@20": {
+          "mean": 0.08200147476762715,
+          "sample_sd": 0.008580282513299703
+        }
+      },
+      "mean_epoch_seconds": 7.702598583385892,
+      "hit_cap": 0,
+      "sources": [
+        "runs/followup_20261101/confirm_ml_lightccf/seed_2026/result.json",
+        "runs/followup_20261101/confirm_ml_lightccf/seed_2027/result.json",
+        "runs/followup_20261101/confirm_ml_lightccf/seed_2028/result.json"
+      ]
+    }
+  },
+  "paired_confirmations": {
+    "grocery": {
+      "mean": 0.003198995051604151,
+      "sample_sd": 0.00011609943707247011,
+      "per_seed": [
+        0.0032180621565005355,
+        0.003074542338779209,
+        0.003304380659532709
+      ],
+      "conditional_user_bootstrap_95ci": [
+        0.0018826335136958947,
+        0.004532437064214154
+      ],
+      "bootstrap_resamples": 10000,
+      "bootstrap_seed": 9117,
+      "bootstrap_percentiles": [
+        2.5,
+        97.5
+      ],
+      "bootstrap_scope": "resample observed test users jointly, conditional on three fixed training seeds; not population or training uncertainty",
+      "observed_test_users": 14681,
+      "relative_ndcg20_percent": 10.997359164988897
+    },
+    "ml": {
+      "mean": -0.012497095520972895,
+      "sample_sd": 0.008850687673907622,
+      "per_seed": [
+        -0.012849106484234499,
+        -0.0034756540120810253,
+        -0.02116652606660316
+      ],
+      "conditional_user_bootstrap_95ci": [
+        -0.02844478679851603,
+        0.002671694778250817
+      ],
+      "bootstrap_resamples": 10000,
+      "bootstrap_seed": 9117,
+      "bootstrap_percentiles": [
+        2.5,
+        97.5
+      ],
+      "bootstrap_scope": "resample observed test users jointly, conditional on three fixed training seeds; not population or training uncertainty",
+      "observed_test_users": 226,
+      "relative_ndcg20_percent": -13.224639783233306
+    }
+  },
+  "masking": {
+    "grocery": {
+      "full": {
+        "seeds": [
+          2023,
+          2024,
+          2025
+        ],
+        "best_epochs": [
+          185,
+          185,
+          160
+        ],
+        "epochs": [
+          210,
+          210,
+          185
+        ],
+        "test": {
+          "Recall@10": {
+            "mean": 0.04956519764775333,
+            "sample_sd": 0.0007746394255265063
+          },
+          "NDCG@10": {
+            "mean": 0.026873534874527694,
+            "sample_sd": 0.00025456361014655575
+          },
+          "Recall@20": {
+            "mean": 0.07288331857502894,
+            "sample_sd": 0.002192422442535398
+          },
+          "NDCG@20": {
+            "mean": 0.032736290481815075,
+            "sample_sd": 0.0006747089211703773
+          }
+        },
+        "mean_epoch_seconds": 0.5205875649412355,
+        "hit_cap": 0,
+        "sources": [
+          "runs/extension/grocery_lightccf_long/seed_2023/result.json",
+          "runs/extension/grocery_lightccf_long/seed_2024/result.json",
+          "runs/extension/grocery_lightccf_long/seed_2025/result.json"
+        ]
+      },
+      "same_user": {
+        "seeds": [
+          2023,
+          2024,
+          2025
+        ],
+        "best_epochs": [
+          210,
+          185,
+          170
+        ],
+        "epochs": [
+          235,
+          210,
+          195
+        ],
+        "test": {
+          "Recall@10": {
+            "mean": 0.049428967145743935,
+            "sample_sd": 0.0010224853210905438
+          },
+          "NDCG@10": {
+            "mean": 0.02677496636727553,
+            "sample_sd": 0.0002531030889948785
+          },
+          "Recall@20": {
+            "mean": 0.07229298639965488,
+            "sample_sd": 0.0020495032756890786
+          },
+          "NDCG@20": {
+            "mean": 0.032527685210692804,
+            "sample_sd": 0.0005782882838744377
+          }
+        },
+        "mean_epoch_seconds": 0.7414184092709957,
+        "hit_cap": 0,
+        "sources": [
+          "runs/followup_20261101/mask_grocery_same_user/seed_2023/result.json",
+          "runs/followup_20261101/mask_grocery_same_user/seed_2024/result.json",
+          "runs/followup_20261101/mask_grocery_same_user/seed_2025/result.json"
+        ]
+      },
+      "random_matched": {
+        "seeds": [
+          2023,
+          2024,
+          2025
+        ],
+        "best_epochs": [
+          185,
+          185,
+          160
+        ],
+        "epochs": [
+          210,
+          210,
+          185
+        ],
+        "test": {
+          "Recall@10": {
+            "mean": 0.04951978748041687,
+            "sample_sd": 0.0009010800732458909
+          },
+          "NDCG@10": {
+            "mean": 0.026865148668388506,
+            "sample_sd": 0.0002810847186356748
+          },
+          "Recall@20": {
+            "mean": 0.07288331857502894,
+            "sample_sd": 0.002275498002655146
+          },
+          "NDCG@20": {
+            "mean": 0.03274104202596962,
+            "sample_sd": 0.0006864811364257345
+          }
+        },
+        "mean_epoch_seconds": 0.8585834141614701,
+        "hit_cap": 0,
+        "sources": [
+          "runs/followup_20261101/mask_grocery_random_matched/seed_2023/result.json",
+          "runs/followup_20261101/mask_grocery_random_matched/seed_2024/result.json",
+          "runs/followup_20261101/mask_grocery_random_matched/seed_2025/result.json"
+        ]
+      },
+      "same_minus_full": {
+        "mean": -0.00020860527112226876,
+        "sample_sd": 0.00017224989704467877,
+        "per_seed": [
+          -0.00037496845479102064,
+          -3.1017665858661114e-05,
+          -0.0002198296927171245
+        ],
+        "conditional_user_bootstrap_95ci": [
+          -0.0003925388944072871,
+          -2.9780005432102087e-05
+        ],
+        "bootstrap_resamples": 10000,
+        "bootstrap_seed": 9117,
+        "bootstrap_percentiles": [
+          2.5,
+          97.5
+        ],
+        "bootstrap_scope": "resample observed test users jointly, conditional on three fixed training seeds; not population or training uncertainty",
+        "observed_test_users": 14681
+      },
+      "same_minus_random": {
+        "mean": -0.00021335681527681152,
+        "sample_sd": 0.00019786281601912443,
+        "per_seed": [
+          -0.0004000710502795046,
+          -5.968825646303355e-06,
+          -0.00023403056990462662
+        ],
+        "conditional_user_bootstrap_95ci": [
+          -0.00039419361236398974,
+          -3.5974114696524744e-05
+        ],
+        "bootstrap_resamples": 10000,
+        "bootstrap_seed": 9117,
+        "bootstrap_percentiles": [
+          2.5,
+          97.5
+        ],
+        "bootstrap_scope": "resample observed test users jointly, conditional on three fixed training seeds; not population or training uncertainty",
+        "observed_test_users": 14681
+      }
+    },
+    "ml": {
+      "full": {
+        "seeds": [
+          2023,
+          2024,
+          2025
+        ],
+        "best_epochs": [
+          65,
+          50,
+          50
+        ],
+        "epochs": [
+          90,
+          75,
+          75
+        ],
+        "test": {
+          "Recall@10": {
+            "mean": 0.05221057426715962,
+            "sample_sd": 0.0027312538838154556
+          },
+          "NDCG@10": {
+            "mean": 0.06056650599237794,
+            "sample_sd": 0.0028587948726437684
+          },
+          "Recall@20": {
+            "mean": 0.08938873482208005,
+            "sample_sd": 0.0058287389745174025
+          },
+          "NDCG@20": {
+            "mean": 0.06662528393812665,
+            "sample_sd": 0.002546612807903056
+          }
+        },
+        "mean_epoch_seconds": 2.6400570229635814,
+        "hit_cap": 0,
+        "sources": [
+          "runs/core/ml_lightccf/seed_2023/result.json",
+          "runs/core/ml_lightccf/seed_2024/result.json",
+          "runs/core/ml_lightccf/seed_2025/result.json"
+        ]
+      },
+      "same_user": {
+        "seeds": [
+          2023,
+          2024,
+          2025
+        ],
+        "best_epochs": [
+          65,
+          55,
+          40
+        ],
+        "epochs": [
+          90,
+          80,
+          65
+        ],
+        "test": {
+          "Recall@10": {
+            "mean": 0.052050310065645256,
+            "sample_sd": 0.0029080919268395363
+          },
+          "NDCG@10": {
+            "mean": 0.05993448877058412,
+            "sample_sd": 0.0014165610252477219
+          },
+          "Recall@20": {
+            "mean": 0.08862652772305539,
+            "sample_sd": 0.001497643119642468
+          },
+          "NDCG@20": {
+            "mean": 0.06508047307276052,
+            "sample_sd": 0.0012147953690847646
+          }
+        },
+        "mean_epoch_seconds": 2.8232358522857375,
+        "hit_cap": 0,
+        "sources": [
+          "runs/followup_20261101/mask_ml_same_user/seed_2023/result.json",
+          "runs/followup_20261101/mask_ml_same_user/seed_2024/result.json",
+          "runs/followup_20261101/mask_ml_same_user/seed_2025/result.json"
+        ]
+      },
+      "random_matched": {
+        "seeds": [
+          2023,
+          2024,
+          2025
+        ],
+        "best_epochs": [
+          65,
+          50,
+          50
+        ],
+        "epochs": [
+          90,
+          75,
+          75
+        ],
+        "test": {
+          "Recall@10": {
+            "mean": 0.05227202952772993,
+            "sample_sd": 0.0027156560130911773
+          },
+          "NDCG@10": {
+            "mean": 0.06065039380880273,
+            "sample_sd": 0.0027929266423850486
+          },
+          "Recall@20": {
+            "mean": 0.08932973777193257,
+            "sample_sd": 0.005896269734244959
+          },
+          "NDCG@20": {
+            "mean": 0.06656507259327675,
+            "sample_sd": 0.0025961452683984153
+          }
+        },
+        "mean_epoch_seconds": 3.563186946962216,
+        "hit_cap": 0,
+        "sources": [
+          "runs/followup_20261101/mask_ml_random_matched/seed_2023/result.json",
+          "runs/followup_20261101/mask_ml_random_matched/seed_2024/result.json",
+          "runs/followup_20261101/mask_ml_random_matched/seed_2025/result.json"
+        ]
+      },
+      "same_minus_full": {
+        "mean": -0.0015448108653661242,
+        "sample_sd": 0.0031929961993130557,
+        "per_seed": [
+          0.0008996136204120625,
+          -0.0003766640496986051,
+          -0.00515738216681183
+        ],
+        "conditional_user_bootstrap_95ci": [
+          -0.0037011978070981043,
+          0.0005835413328647359
+        ],
+        "bootstrap_resamples": 10000,
+        "bootstrap_seed": 9117,
+        "bootstrap_percentiles": [
+          2.5,
+          97.5
+        ],
+        "bootstrap_scope": "resample observed test users jointly, conditional on three fixed training seeds; not population or training uncertainty",
+        "observed_test_users": 226
+      },
+      "same_minus_random": {
+        "mean": -0.0014845995205162305,
+        "sample_sd": 0.0032653169378469462,
+        "per_seed": [
+          0.001060585150709864,
+          -0.0003480797901167926,
+          -0.005166303922141763
+        ],
+        "conditional_user_bootstrap_95ci": [
+          -0.0036450281744766335,
+          0.0006528393536761858
+        ],
+        "bootstrap_resamples": 10000,
+        "bootstrap_seed": 9117,
+        "bootstrap_percentiles": [
+          2.5,
+          97.5
+        ],
+        "bootstrap_scope": "resample observed test users jointly, conditional on three fixed training seeds; not population or training uncertainty",
+        "observed_test_users": 226
+      }
+    }
+  },
+  "previous_result_records_unchanged": 51,
+  "locked_source_hashes_verified": true,
+  "previous_result_manifest": "runs/followup_20261101/previous_result_sha256.json",
+  "search_cap_hits": 0,
+  "confirmation_cap_hits": 0,
+  "upstream_sources_match_pinned_commit": true,
+  "shared_gpu_scheduling": true
+}

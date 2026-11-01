@@ -108,7 +108,7 @@ def main():
     out.mkdir(exist_ok=True)
     cols = ["user_id", "item_id", "time", "c_hour_c", "c_weekday_c", "c_period_c", "c_day_f"]
     for name, frame in [("train", train), ("dev", dev), ("test", test)]:
-        frame[cols + ([] if name == "train" else ["neg_items"])].to_csv(out / f"{name}.csv", sep="\t", index=False)
+        frame[cols + ([] if name == "train" else ["neg_items"])].to_csv(out / f"{name}.csv", sep="\t", index=False, lineterminator="\r\n")
     (out / "user2newid.json").write_text(json.dumps(user_map), encoding="utf-8")
     (out / "item2newid.json").write_text(json.dumps(item_map), encoding="utf-8")
     manifest = {
@@ -123,6 +123,7 @@ def main():
             "cold_rows_removed": {"dev": original_sizes["dev"] - len(dev), "test": original_sizes["test"] - len(test)},
             "deviations": ["fixed timezone instead of implicit host timezone", "correct notebook path and undefined-variable typos", "skip unused CTR and item metadata branches", "enforce 5-core convergence explicitly; identical resulting membership on this input"],
         },
+        "serialization": {"encoding": "UTF-8", "line_ending": "CRLF", "scope": "pin the originally measured Windows dataset bytes; no interaction changes"},
         "datasets": {},
     }
     for name in ["Grocery_and_Gourmet_Food", "ML_1MTOPK"]:

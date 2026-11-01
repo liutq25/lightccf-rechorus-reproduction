@@ -29,7 +29,7 @@ def main():
         raise RuntimeError('No tracked code files; stage the reviewed repository first')
     analysis_files = list((ROOT / 'analysis').glob('*'))
     evidence = []
-    for group in ('core', 'ablation', 'official_anchor', 'extension'):
+    for group in ('core', 'ablation', 'official_anchor', 'extension', 'followup_20261101'):
         base = ROOT / 'runs' / group
         if base.exists():
             evidence += [p for p in base.rglob('*') if p.is_file() and p.name in
@@ -39,6 +39,10 @@ def main():
     selection = ROOT / 'runs/extension/parameter_selection.json'
     if selection.exists():
         evidence.append(selection)
+    for name in ('validation_selection.json','source_hashes.json','previous_result_sha256.json','independent_selection.json','scheduling_events.json'):
+        path=ROOT/'runs/followup_20261101'/name
+        if path.exists():
+            evidence.append(path)
     entries = {}
     for path in code_files:
         if path.is_file():

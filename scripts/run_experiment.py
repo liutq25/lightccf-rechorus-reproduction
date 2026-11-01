@@ -15,6 +15,7 @@ from helpers.ReproductionRunner import ReproductionRunner
 from models.general.BPRMF import BPRMF
 from models.general.LightGCN import LightGCN
 from models.general.LightCCF import LightCCF
+from models.general.LightCCFMasked import LightCCFMasked
 
 
 def main():
@@ -60,7 +61,7 @@ def main():
                        gpu=torch.cuda.get_device_name(0) if args.device.type == 'cuda' else None)
     corpus = BaseReader(args)
     hashes = {phase: hashlib.sha256((Path(args.path) / args.dataset / (phase + '.csv')).read_bytes()).hexdigest() for phase in ['train','dev','test']}
-    model_cls = {'BPRMF': BPRMF, 'LightGCN': LightGCN, 'LightCCF': LightCCF}[args.model]
+    model_cls = {'BPRMF': BPRMF, 'LightGCN': LightGCN, 'LightCCF': LightCCF, 'LightCCFMasked': LightCCFMasked}[args.model]
     model = model_cls(args, corpus).to(args.device)
     if isinstance(model, LightGCN):
         # Use canonical sparse storage without changing graph values. The

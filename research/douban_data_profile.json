@@ -1,0 +1,18 @@
+{
+  "train": {
+    "users": 12833,
+    "interactions": 633649,
+    "duplicate_interactions_within_user": 0
+  },
+  "test": {
+    "users": 11233,
+    "interactions": 158413,
+    "duplicate_interactions_within_user": 0
+  },
+  "users": 13024,
+  "items": 22347,
+  "interactions": 792062,
+  "train_test_overlap": 0,
+  "test_users_absent_from_train": 191,
+  "test_items_absent_from_train": 0
+}

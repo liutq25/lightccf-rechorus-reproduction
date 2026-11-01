@@ -24,7 +24,7 @@ def git_clone_pin(url, path, commit):
         raise RuntimeError(f'Existing author ZIP snapshot has an unexpected hash: {actual}')
     if not path.exists():
         path.parent.mkdir(parents=True, exist_ok=True)
-        subprocess.run(['git', 'clone', url, str(path)], check=True)
+        subprocess.run(['git', 'clone', '--config', 'core.autocrlf=false', url, str(path)], check=True)
         subprocess.run(['git', '-C', str(path), 'checkout', '--detach', commit], check=True)
     head = subprocess.check_output(['git', '-C', str(path), 'rev-parse', 'HEAD'], text=True).strip()
     if head != commit:
@@ -34,12 +34,34 @@ def git_clone_pin(url, path, commit):
 def install_extensions():
     for source, destination in (
         (ROOT / 'extensions' / 'LightCCF.py', RECHORUS / 'src/models/general/LightCCF.py'),
+        (ROOT / 'extensions' / 'LightCCFMasked.py', RECHORUS / 'src/models/general/LightCCFMasked.py'),
         (ROOT / 'extensions' / 'ReproductionRunner.py', RECHORUS / 'src/helpers/ReproductionRunner.py'),
     ):
         destination.parent.mkdir(parents=True, exist_ok=True)
         if destination.exists() and destination.read_bytes() != source.read_bytes():
             raise RuntimeError(f'Extension differs from source: {destination}')
         shutil.copy2(source, destination)
+
+
+def normalize_grocery_line_endings():
+    """Pin the measured dataset bytes independently of the host Git settings.
+
+    The reported Windows run used CRLF; only the line-ending-equivalent upstream
+    content is accepted. An altered dataset is rejected before any write.
+    """
+    expected={
+        'train':'026610b38a04930b84468cd6a7407ec9de52393d42eff910d9783856f21adaa6',
+        'dev':'524aeba840c7170281902406f394071bb8d4d8ffc4185d80ed7d1bc3ab03de32',
+        'test':'9d5591a373a17575f2988f5b5951fa5027fb695c53ce0f857f9497168db51f20',
+    }
+    for phase,digest in expected.items():
+        path=RECHORUS/'data/Grocery_and_Gourmet_Food'/f'{phase}.csv'
+        original=path.read_bytes()
+        canonical=original.replace(b'\r\n',b'\n').replace(b'\n',b'\r\n')
+        if hashlib.sha256(canonical).hexdigest()!=digest:
+            raise RuntimeError(f'Unexpected Grocery content: {path}; refusing to overwrite')
+        if canonical!=original:
+            path.write_bytes(canonical)
 
 
 def get_movielens():
@@ -61,6 +83,7 @@ def main():
     args = parser.parse_args()
     git_clone_pin('https://github.com/THUwangcy/ReChorus.git', RECHORUS,
                   'c164ec4303cc20ddcfbd1b57de366a481811d1e5')
+    normalize_grocery_line_endings()
     install_extensions()
     get_movielens()
     subprocess.run([sys.executable, str(ROOT / 'scripts/prepare_rechorus_data.py')],

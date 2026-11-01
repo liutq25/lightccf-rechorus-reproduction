@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-01",
+  "python_environment": "pytorch-cuda (Python3.11/PyTorch2.5.1+cu121)",
+  "command": "python -m unittest discover -s tests -v",
+  "tests_passed": 23,
+  "tests_failed": 0,
+  "tests_skipped": 0,
+  "cuda_private_rng_and_finite_gradient_test_passed": true,
+  "test_sources_sha256": {
+    "tests/test_evaluation.py": "605a3ae85cf81f520e92f9a0ee890418f4a4ea5eb7d2df788b0731af9c286628",
+    "tests/test_lightccf.py": "45b66f34d13097c47acc42aa1954bb1915073ea373fa7ebd79f11bffaee5d6d1",
+    "tests/test_na_masking.py": "d02f1489da8fc968fe2fc1b3e4cd1218ffdf4ccd38ad1a2eb6fb803f723f1bea"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "model": "LightCCFMasked",
+  "dataset": "ML_1MTOPK",
+  "n_layers": 0,
+  "emb_size": 64,
+  "tau": 0.28,
+  "ssl_weight": 1.0,
+  "reg_weight": 0.0001,
+  "l2": 0.0,
+  "batch_size": 2048,
+  "epoch": 1000,
+  "early_stop": 25,
+  "eval_every": 5,
+  "mask_policy": "random_matched"
+}
