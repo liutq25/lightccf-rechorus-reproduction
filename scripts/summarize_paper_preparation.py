@@ -1,5 +1,6 @@
 """Publish concise preparation evidence without copying complete issue discussions."""
 from pathlib import Path
+from collections import Counter
 import hashlib
 import json
 
@@ -54,6 +55,29 @@ def main():
         'VGCL primary repository says its original paper results use TensorFlow and its PyTorch version differs; the backend used by LightCCF Table 5 is not stated.',
         'A resource probe is not model convergence, baseline accuracy validation, or a full paper reproduction.'])
     (ROOT/'research/baseline_protocol_audit.json').write_text(json.dumps(output,indent=2),encoding='utf-8')
+    resource_list=ROOT/'runs/paper_expansion/resource_author/summary.json'
+    if resource_list.exists():
+        entries=[]
+        for row in json.loads(resource_list.read_text(encoding='utf-8')):
+            path=ROOT/row['path']
+            probe=json.loads(path.read_text(encoding='utf-8-sig'))
+            entry=dict(**row,raw_sha256=sha(path))
+            for key in ('probe_only','training_batch_size','training_steps','parameters',
+                        'training_peak_allocated_bytes','training_peak_reserved_bytes',
+                        'test_peak_allocated_bytes','test_peak_reserved_bytes','training_step_seconds',
+                        'estimated_compute_seconds_per_epoch','epoch_training_unit','clustering_backend',
+                        'wall_seconds','error','reason','minimum_available_host_bytes',
+                        'available_physical_memory_bytes','working_set_bytes','script_sha256'):
+                if key in probe:
+                    entry[key]=probe[key]
+            entries.append(entry)
+        resource=dict(status='preflight_complete' if len(entries)==42 else 'partial_preflight',
+            counts=dict(Counter(r['status'] for r in entries)),entries=entries,
+            limitations=['Full-batch probes are not converged accuracy experiments.',
+                'Compute-per-epoch forecasts contain only optimizer steps, excluding sampling, evaluation, I/O, graph augmentation and clustering; they are not total runtime estimates.',
+                'The initial Douban BIGCF config error is preserved. A compatible primary config was subsequently recovered, and Tmall/Amazon BIGCF probes succeeded; the original error is not a hardware blocker.',
+                'Timeout and host-memory-pressure termination do not prove CPU or memory-optimized execution impossible.'])
+        (ROOT/'analysis/original_resource_audit.json').write_text(json.dumps(resource,indent=2),encoding='utf-8')
     print('Recorded 16 primary baseline sources and unresolved protocol/integration details.')
 
 
