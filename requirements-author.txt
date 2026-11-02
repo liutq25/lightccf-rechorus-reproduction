@@ -1,0 +1,8 @@
+# Python 3.8.18; official CUDA 12.1 wheel index required for torch.
+# python -m pip install --extra-index-url https://download.pytorch.org/whl/cu121 -r requirements-author.txt
+torch==2.1.0+cu121
+numpy==1.24.3
+scipy==1.10.1
+tqdm==4.65.0
+# Optional NCL/VGCL clustering backend; CPU build, explicitly recorded.
+faiss-cpu==1.7.4

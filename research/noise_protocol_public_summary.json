@@ -1,0 +1,154 @@
+{
+  "retrieved_utc": "2026-11-02T04:06:54.042694Z",
+  "repositories": {
+    "ZzYUuuu/LightCCF": {
+      "url": "https://github.com/ZzYUuuu/LightCCF",
+      "scanned_sha256": {
+        "LightCCF.py": "1e52ddaa5634fed2db5a883ec2686428b0ac9a6bb2b446e6c7f69aca8010bd66",
+        "LightCCF.sh": "912f6cf98f3865df61cf9817d3848441be40362d95f1c2cfa7897b8d6db99d9e",
+        "main.py": "670f4c8d294e32647939f653fcfd3bc683d94726a2d5d1214f1d426ee855cfa2",
+        "README.md": "e6917714ffa70fcb4e9e82e7e76fa69d99456d84d44cac6e9fe22a62c605954f",
+        "utility/data_loader.py": "7d19e185f0f6fbd0fec04ec28e39880fb391b5ecb8c95bc55e32bd2ec696182e",
+        "utility/losses.py": "0717e2cc8f37cac9f3e947647f6c043ed0839b207dc3f4fa3311aebcded86da3",
+        "utility/parser.py": "ca37dbc15803e8addf2975de07280c558d832271d9b71e12773f896fa7ac94ed",
+        "utility/tester.py": "196c7a516af753cdaf2a6a0aa9480515b480df68802d1722a4cf4e8770bbbcfa",
+        "utility/tools.py": "eda5b820e591cae8504813d87a50baa3ce41e72516433904442d6ca927083a62",
+        "utility/trainer.py": "032e293a728abcbbc259654788572585f906d50c615d8f8427e68bd0bb751d00"
+      },
+      "source_matches": [],
+      "public_issues": [
+        {
+          "number": 2,
+          "url": "https://github.com/ZzYUuuu/LightCCF/issues/2",
+          "title": "在ID-Grec项目上，Douban-book 数据集进行复现lightccf出现问题",
+          "keyword_match": false,
+          "body_sha256": "bf0df837bcfb50d4c77d468713d03faef61ef43d8510d95f24f242c3281b2b0d",
+          "comments": []
+        },
+        {
+          "number": 1,
+          "url": "https://github.com/ZzYUuuu/LightCCF/issues/1",
+          "title": "为什么训练时间远不如现有模型？使用RTX 4090D，在lightgcl使用的数据集amazon-book中，lightgcl的训练时间只有92s，但是使用该代码的训练时间超过7minute",
+          "keyword_match": false,
+          "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "comments": [
+            {
+              "url": "https://github.com/ZzYUuuu/LightCCF/issues/1#issuecomment-3621506758",
+              "body_sha256": "f0493f2ce7fc09b05686037a549aa12b36882524fd792259ae693a05de4f62e9"
+            },
+            {
+              "url": "https://github.com/ZzYUuuu/LightCCF/issues/1#issuecomment-3621579725",
+              "body_sha256": "b8b1c32f86f965a4bc8221286f76064483de5d2edba74e7612bdf2816d0ae4f9"
+            },
+            {
+              "url": "https://github.com/ZzYUuuu/LightCCF/issues/1#issuecomment-3621783276",
+              "body_sha256": "89507aa8a5142a64bc3fb037795ab0f1cb74a0a31f5710e02e73f0d35b3e8504"
+            },
+            {
+              "url": "https://github.com/ZzYUuuu/LightCCF/issues/1#issuecomment-3624538674",
+              "body_sha256": "e6dc881113026743a48f1fcb1b03e4f56f619d274bfebe774d5725b8493482fb"
+            }
+          ]
+        }
+      ],
+      "issue_search_complete": true
+    },
+    "BlueGhostYi/ID-GRec": {
+      "url": "https://github.com/BlueGhostYi/ID-GRec",
+      "scanned_sha256": {
+        "main.py": "5f4d8c2116400d0f095bd881d0de0e7ac9dd29a5d3785c5bcb820c33644430a5",
+        "Parser.py": "202b6add8447c6a421a62728d345c67f1f450b4e5fa27ea2edf210a4ab97a2ea",
+        "README.md": "a5ee3f04633f44e3e87ce5cd66b2bc6e6618cbf21c33f4c45766bc771518a3ae",
+        "models/BIGCF.py": "ad0c6d5783332a9707514da21b55f296424421d8572f216cf8af4801a6a63101",
+        "models/CGCL.py": "7d82aa9b98728c04b50bced67bd19199cf70161c82133bba103e2c49b548b9ee",
+        "models/CVGA.py": "dbae437ae752e29b71941b6cb21d5562734f7159da0b6bb2d90c6dd02c32b4c0",
+        "models/DirectAU.py": "3b58a6e01c91212354189f3fe52988dbcce59e0a9152a70b5d7e847225669331",
+        "models/EGCF.py": "aaa12fbf31c08173b92077c4b1bc4f3e18d9258e903d8ad2460671de5cc0b06e",
+        "models/GCCF.py": "71adddee67bd605cfcc90077148ceaf4e27d5759865b95ca40f8f4c07a5ca326",
+        "models/GCMC.py": "8749949615c844f6c09f39f743538e79e12969401de947086c696593ffde569c",
+        "models/HCCF.py": "8ff0224a78e22fc15d5ae7c5a3848cff4d681099ec714a02666bfeac4881b121",
+        "models/IMPGCN.py": "b45c9e4f48f6a63a9a8e4f5ad378839b0bd6860aa14953ca37de2a3c8f89810f",
+        "models/LightCCF.py": "a7e0115c2f91c112f9ef60a59331c5bf34f57250e0775839bff65a81545400c3",
+        "models/LightGCL.py": "f7ff3d13302cb157c1d3ab0c1ef9f92a64b36878f937edf36cea7ab202dadc06",
+        "models/LightGCN.py": "d14fff3d8b6e4bdae12184d8ff6229987e542bddc97f267095771661f2fd24db",
+        "models/LightGCN_pp.py": "2c578d6d8e95eb66ed53bc151c915f7d2dc5265f30f9534569bb2abea53de30b",
+        "models/LightGODE.py": "8cacb48e4f6225093882749c7b80089477af6d3b624e4281aedc359c7c4fff21",
+        "models/MAWU.py": "5add9c153352f399eff5599ae53d28ea45e52d26cd03cd584a8864398e820c44",
+        "models/MFBPR.py": "db29b2240afc51eed18522c0bac248d561d44a86e0417f69f24cc2def6e32a15",
+        "models/MixRec.py": "d93c3016fb8182f7ea8d9f13d28c7a62e88e587c43910fdcfffa478b5c881d8a",
+        "models/NCL.py": "eda097570905289ef1fd0221f70cc2e7703c450c23f00abda3453ce7b09948ff",
+        "models/NGCF.py": "ea5bb0736623d71cadf163187bb7ffa2b3b832b2d150f2467b17092f011b2ea9",
+        "models/RecDCL.py": "0459b97b86a503b1c21482a53e404e2a7b726f248d120e520ada86fe3f87a848",
+        "models/SCCF.py": "0e98f9f145459556e7d1d40f3707908cdbb078ba144cf9e7228c9b807425cd36",
+        "models/SGL.py": "35e195fe2619460046e9d0d19c84c949087e8d3cfc3a6792b5b6b922bb203c42",
+        "models/SimGCL.py": "66eba10690ec9a36ac58d3c8cd9d03cab708a18ab3a07a1c9f5c490a8c73f2e4",
+        "models/XSimGCL.py": "ab6d4c90dc7b27775dfcbd9e60978685c8415d20933d3d943447570d8397660d",
+        "utility/utility_data/data_graph.py": "9e176fd6d760633b3e23b4f9777cb925481a342ae6a1c7fc040ae9abd2a68098",
+        "utility/utility_data/data_loader.py": "d83c7922c484c074dab20418e641db6a2839320db1c90e2ef89974e1b1603c62",
+        "utility/utility_data/data_sampler.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "utility/utility_function/losses.py": "c480311dbe70508b9951312b624f49165ed668eade6449d757a2b90f872b8ab4",
+        "utility/utility_function/metrics.py": "f676bed65fddbcd8b6f44de500c798516237d6ac9e4728dc3cd03345ed8c83f5",
+        "utility/utility_function/tools.py": "cbe03cd05092c5269b88558df19a101a5cf3c0c8f184e3f8a8a8e580e3e35af8",
+        "utility/utility_train/batch_test.py": "ad1211c32bb3bde9267a020f2dada8a783fd67531d53f2c79d0e882e3e961609",
+        "utility/utility_train/trainer.py": "b2197da0ce675e5531aa74c80fb6fedb31633c4995e6bee5a1d558e2bb832349"
+      },
+      "source_matches": [],
+      "public_issues": [
+        {
+          "number": 3,
+          "url": "https://github.com/BlueGhostYi/ID-GRec/issues/3",
+          "title": "MixRec",
+          "keyword_match": false,
+          "body_sha256": "379214c73d2c7fb01d054a62fffd35a310096dcb90348e0e8bac9dcc98e5bd49",
+          "comments": [
+            {
+              "url": "https://github.com/BlueGhostYi/ID-GRec/issues/3#issuecomment-2864670529",
+              "body_sha256": "6f5d31492032f118606ac01bc025c2d8cb36acdf67f9c5f6f17b51df0719c72c"
+            }
+          ]
+        },
+        {
+          "number": 2,
+          "url": "https://github.com/BlueGhostYi/ID-GRec/issues/2",
+          "title": "Would you like to disclose the source for DiffRec?",
+          "keyword_match": false,
+          "body_sha256": "1aa39f8329fa11ec9eeaa4e83d18a2441daa5a61d716615c7226a88f78872280",
+          "comments": [
+            {
+              "url": "https://github.com/BlueGhostYi/ID-GRec/issues/2#issuecomment-2679981978",
+              "body_sha256": "646c03d53c2825053129ab52f376641c5428dbe0866a40426ed62ed1d4c659ff"
+            },
+            {
+              "url": "https://github.com/BlueGhostYi/ID-GRec/issues/2#issuecomment-2680957580",
+              "body_sha256": "7042a9b344b9d4b3f75bf294396a9841852890831ee72c1009f95ce501eb098d"
+            }
+          ]
+        }
+      ],
+      "issue_search_complete": false,
+      "issue_search_error": "<HTTPError 403: 'rate limit exceeded'>",
+      "commit_message_matches": []
+    }
+  },
+  "paper_source": "https://arxiv.org/abs/2504.10113",
+  "paper_specifies": [
+    "Inject 10%, 20%, 30% adversarial user-item interactions into training; leave test unchanged."
+  ],
+  "unspecified": [
+    "Attack objective and attacker knowledge",
+    "How injected users and items are selected",
+    "Whether ratios refer to original or augmented interaction counts",
+    "Duplicate/previous-positive/held-out-positive rejection rules",
+    "Attack optimization, budget constraints and random seeds"
+  ],
+  "conclusion": "No claim of exact Figure 3 reproduction is justified without a defined attack protocol. Random corruption would be a separate reconstruction.",
+  "caveat": "A negative search of released sources and public issues does not prove that private experimental code does not exist.",
+  "private_raw_audit_sha256": "393b1dc7e3c0ccd4fdcf345030a4c46b4218f27d31bc60db9490bfc010664bab",
+  "html_supplement": {
+    "url": "https://github.com/BlueGhostYi/ID-GRec/issues/1",
+    "reviewed": "2026-11-02",
+    "topic": "Dataset format and random 80/20 splitting, not adversarial perturbation",
+    "comments_reviewed": 3,
+    "reason": "API rate limit interrupted the automated request; the public HTML conversation was then read."
+  }
+}

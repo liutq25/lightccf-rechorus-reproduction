@@ -1,0 +1,158 @@
+{
+  "douban-book": {
+    "users": 13024,
+    "items": 22347,
+    "train_interactions": 633649,
+    "test_interactions": 158413,
+    "total_interactions": 792062,
+    "train_users": 12833,
+    "test_users": 11233,
+    "test_users_without_train": 191,
+    "test_items_without_train": 0,
+    "duplicate_train": 0,
+    "duplicate_test": 0,
+    "train_test_overlap": 0,
+    "cache_nnz": 1267298,
+    "cache_max_abs_difference_from_train_only_graph": 1.986821490662649e-08,
+    "cache_matches_train_only_graph": true,
+    "cache_missing_train_edges": 0,
+    "cache_edges_absent_from_train": 0,
+    "extra_pairs": [],
+    "cache_test_edges": 0,
+    "source_identity": {
+      "train.txt": {
+        "git_blob_sha1": "3c0a684eb19135c7745ac4d7261ba6bdfdaf6337",
+        "pinned_remote_blob_sha1": "3c0a684eb19135c7745ac4d7261ba6bdfdaf6337",
+        "matches_pinned_author_source": true
+      },
+      "test.txt": {
+        "git_blob_sha1": "dd6cd629c46606f87cc993c4d0f17e760425142c",
+        "pinned_remote_blob_sha1": "dd6cd629c46606f87cc993c4d0f17e760425142c",
+        "matches_pinned_author_source": true
+      },
+      "pre_Adj.npz": {
+        "git_blob_sha1": "9620b6a8e5282d245b8fa49dc89b88734651fb2c",
+        "pinned_remote_blob_sha1": null,
+        "matches_pinned_author_source": null
+      }
+    },
+    "clean_graph_path": "data/author_clean_graphs/douban-book/pre_Adj.npz",
+    "clean_graph_sha256": "d9f3fa2f5b8a2f98cb74ad9d06daecf009dd2d40465f227ed2d14f1cbb25e84f",
+    "sha256": {
+      "train.txt": "de1ea9b264fb459643ef0729584aacaa7ef5da4ada8f195eb1392beea4f2b905",
+      "test.txt": "fa899e46e741adca662a5814bd4858a37f00c69518de6282b0cd215bba97ca9d",
+      "pre_Adj.npz": "5ed0065b9b16d66992200acb8d0664084ba57e044015a5b6e11ef0bceac657d3"
+    }
+  },
+  "tmall": {
+    "users": 47939,
+    "items": 41390,
+    "train_interactions": 2309512,
+    "test_interactions": 309877,
+    "total_interactions": 2619389,
+    "train_users": 47939,
+    "test_users": 47938,
+    "test_users_without_train": 0,
+    "test_items_without_train": 0,
+    "duplicate_train": 0,
+    "duplicate_test": 0,
+    "train_test_overlap": 0,
+    "cache_nnz": 4619024,
+    "cache_max_abs_difference_from_train_only_graph": 7.857521175380633e-09,
+    "cache_matches_train_only_graph": true,
+    "cache_missing_train_edges": 0,
+    "cache_edges_absent_from_train": 0,
+    "extra_pairs": [],
+    "cache_test_edges": 0,
+    "source_identity": {
+      "train.txt": {
+        "git_blob_sha1": "71183ce9da9fa3d0fb70621e59124465f257fd51",
+        "pinned_remote_blob_sha1": "71183ce9da9fa3d0fb70621e59124465f257fd51",
+        "matches_pinned_author_source": true
+      },
+      "test.txt": {
+        "git_blob_sha1": "70e6878a7618359cdef2a4d6cf9146b3bf4874d9",
+        "pinned_remote_blob_sha1": "70e6878a7618359cdef2a4d6cf9146b3bf4874d9",
+        "matches_pinned_author_source": true
+      },
+      "pre_Adj.npz": {
+        "git_blob_sha1": "f6ae7c18b31dccf00f664cb6e23e3b9acf39be2e",
+        "pinned_remote_blob_sha1": "f6ae7c18b31dccf00f664cb6e23e3b9acf39be2e",
+        "matches_pinned_author_source": true
+      }
+    },
+    "clean_graph_path": "data/author_clean_graphs/tmall/pre_Adj.npz",
+    "clean_graph_sha256": "21a2de0fa70ebce278d94f1ea4d893a19eecd3525be81754fd11f169e888e22f",
+    "sha256": {
+      "train.txt": "f918687f454d18f02d8953e992c25e99b59b2dc06eeecd345c88133883b70666",
+      "test.txt": "eb20acd3180c122fc3260474755de3163bb8721c1ea9eb93d2586ebff00c94bc",
+      "pre_Adj.npz": "511e43fde89e79adfef8269b60792e5fd2eb969b3f332f93c0d6f0a3148d7863"
+    }
+  },
+  "amazon-book": {
+    "users": 52643,
+    "items": 91599,
+    "train_interactions": 2380726,
+    "test_interactions": 603382,
+    "total_interactions": 2984108,
+    "train_users": 52643,
+    "test_users": 52643,
+    "test_users_without_train": 0,
+    "test_items_without_train": 0,
+    "duplicate_train": 0,
+    "duplicate_test": 0,
+    "train_test_overlap": 0,
+    "cache_nnz": 4761460,
+    "cache_max_abs_difference_from_train_only_graph": 0.1767766922712326,
+    "cache_matches_train_only_graph": false,
+    "cache_missing_train_edges": 0,
+    "cache_edges_absent_from_train": 4,
+    "extra_pairs": [
+      {
+        "user_id": 13647,
+        "item_id": 73362,
+        "is_test_positive": true
+      },
+      {
+        "user_id": 41589,
+        "item_id": 90329,
+        "is_test_positive": true
+      },
+      {
+        "user_id": 50736,
+        "item_id": 61633,
+        "is_test_positive": true
+      },
+      {
+        "user_id": 52234,
+        "item_id": 91110,
+        "is_test_positive": true
+      }
+    ],
+    "cache_test_edges": 4,
+    "source_identity": {
+      "train.txt": {
+        "git_blob_sha1": "8a8382743b1c1e61d1ab086412372b9201685bc9",
+        "pinned_remote_blob_sha1": "8a8382743b1c1e61d1ab086412372b9201685bc9",
+        "matches_pinned_author_source": true
+      },
+      "test.txt": {
+        "git_blob_sha1": "90f9190abf5e51bedbbc926804245820257344c6",
+        "pinned_remote_blob_sha1": "90f9190abf5e51bedbbc926804245820257344c6",
+        "matches_pinned_author_source": true
+      },
+      "pre_Adj.npz": {
+        "git_blob_sha1": "506d570876d9762f1ce03f49bb3aae14c034f6e7",
+        "pinned_remote_blob_sha1": "506d570876d9762f1ce03f49bb3aae14c034f6e7",
+        "matches_pinned_author_source": true
+      }
+    },
+    "clean_graph_path": "data/author_clean_graphs/amazon-book/pre_Adj.npz",
+    "clean_graph_sha256": "eb84ffc2dc29cf3b2241c1a762f308ee73ef45214c7c23eefa32cbfa502f027c",
+    "sha256": {
+      "train.txt": "1cae3b9e61692128742f49ede1b34f1f4d234dd49eec1dff5e28dc0945eda6c4",
+      "test.txt": "516a10049b0dd749b676c580cdded582eef034f69397b098db8e0ff6c7a48717",
+      "pre_Adj.npz": "6e83ab34728e547b06956cb90ed7fbe640246f09355cf8372f87de3766f90f4b"
+    }
+  }
+}

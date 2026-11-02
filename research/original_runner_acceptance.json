@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "epochs_compared": 4,
+  "native_metric_decimal_places": 8,
+  "native_loss_decimal_places": 6,
+  "checkpoint_continuation": "bitwise equal tensors, optimizer and RNG",
+  "torch": "2.1.0+cu121",
+  "numpy": "1.24.3",
+  "evidence_sha256": {
+    "scripts/run_original_lightccf.py": "4770e5ca4354f5904bc871979ffa1ae912884be7fcdd2f7b020a555e7098b534",
+    "scripts/validate_original_runner.py": "c760c4eb9cdb886bb3e85d93bbc61a9c5fab72394f60f8fb1ae41ad3cdc3fce2",
+    "runs/official_anchor/douban-book/seed_2023/author_train.log": "434890124695fb3b43c2e00da567bdb2bc126f80db2437759dd5562382bd59c6",
+    "runs/paper_expansion/acceptance/author_uninterrupted/config.json": "b8932c8ba417ff62f86db045053c726fe37ca6c105525915878a0b12d69cad0a",
+    "runs/paper_expansion/acceptance/author_uninterrupted/history.jsonl": "7f982cd7ba77470b535039bf05c9767b2962891890bb96c88ddb6f4fb877f687",
+    "runs/paper_expansion/acceptance/author_uninterrupted/result.json": "4282a5c43ba4d59394618b211d0d4beea4b8efb2f0ca81ae1122309849a585ae",
+    "runs/paper_expansion/acceptance/author_uninterrupted/test_users.json": "7b117446677bae14f7c73c166fbd31164f6aa154a4f64ede4a6ea77e5ee19fcf",
+    "runs/paper_expansion/acceptance/author_resumed/config.json": "b8932c8ba417ff62f86db045053c726fe37ca6c105525915878a0b12d69cad0a",
+    "runs/paper_expansion/acceptance/author_resumed/history.jsonl": "31b0ebe719302df4160a4fb1867827dc0b3be04c5051665f228b741a0fdff145",
+    "runs/paper_expansion/acceptance/author_resumed/result.json": "7d465dca58337fbc129d79fac6be4b01a729f68fe0347b5d2bf6d596482eeb4d",
+    "runs/paper_expansion/acceptance/author_resumed/test_users.json": "7b117446677bae14f7c73c166fbd31164f6aa154a4f64ede4a6ea77e5ee19fcf"
+  },
+  "caveat": "Prefix identity validates the recording/resume wrapper; it does not establish full-paper reproduction."
+}

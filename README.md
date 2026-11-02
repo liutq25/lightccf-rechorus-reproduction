@@ -1,8 +1,29 @@
 # LightCCF 的 ReChorus 课程复现
 
-本项目复现 SIGIR 2025 论文 *Unveiling Contrastive Learning's Capability of Neighborhood Aggregation for Collaborative Filtering*，在 ReChorus 2.0 的两个数据集上，与 BPRMF 和 LightGCN 比较。当前累计 **71 次正式运行、25 次仅验证搜索**。短跑和软件验收不计入这些测试均值。
+本项目复现 SIGIR 2025 论文 *Unveiling Contrastive Learning's Capability of Neighborhood Aggregation for Collaborative Filtering*，在 ReChorus 2.0 的两个数据集上，与 BPRMF 和 LightGCN 比较。上一阶段已归档 **71 次正式运行、25 次仅验证搜索**。原文覆盖补全现已继续推进，新增结果单独统计。短跑、资源探测和软件验收不计入正式测试均值。
 
 [论文](https://arxiv.org/abs/2504.10113v1) · [DOI](https://doi.org/10.1145/3726302.3730111) · [作者实现](https://github.com/ZzYUuuu/LightCCF) · [ReChorus](https://github.com/THUwangcy/ReChorus)
+
+## 原文覆盖补全（2026-11-02 起，进行中）
+
+不以课程最低要求为停止标准；按 `research/full_paper_plan_20261102.md` 补三套原始数据、五种子主结果、LightCCF层数、CL-SS/CL-UI、原文基线、稀疏分组、参数与效率。尚未运行不等于不可运行，资源探测不等于精度复现。现有PDF和ZIP仍是上一阶段版本，待新增正式结果核验后再更新。
+
+- 作者推荐的 Python3.8.18、PyTorch2.1.0/cu121、NumPy1.24.3、SciPy1.10.1 已另建环境，完整版本及五个基线来源库固定提交见 `research/original_sources_environment.json`；依赖见 `requirements-author.txt`。
+- Douban MF验收中新程序前四轮与原入口一致，中断恢复的模型、优化器和随机数状态完全一致；验收见 `research/original_runner_acceptance.json`。完整Douban种子2023的54轮轨迹在新旧环境间也一致（原日志精度），见 `research/original_environment_comparison.json`。这不能推广为所有模型和数据的软件环境等价或所有CUDA算子的逐位确定性。
+- **数据审计发现发布的Amazon图缓存多4条测试边**，train/test文件本身没有重叠。已对固定远端版本核对，原缓存保留，另建仅训练集图作为新增Amazon正式实验输入。只能确认发布物问题，不能断言论文训练用过该缓存；见 `research/original_dataset_audit.json`。
+- LightCCF在Amazon原始4096训练批量、三层GCN和2048评价批量下实测可运行。RecDCL的原2048维Amazon配置在Windows共享内存下造成严重宿主内存压力，诊断已停止；这不排除CPU或等价省内存实现。逐模型资源记录在 `runs/paper_expansion/resource_author/`，不冒充正式收敛结果。
+- 主队列固定15次，见 `configs/paper_expansion_main.json`；每次完成后检查证据与差距，超出预设诊断阈值即停下审核。当前进度写入 `runs/paper_expansion/queue_status.json`，完成结果与原分组统计在 `analysis/original_paper_expansion.json`。
+- 16个基线均已找到作者来源，但数据专属参数、框架间选轮差异及个别定制训练器仍待核清，见 `research/baseline_protocol_audit.json`。对抗交互生成协议未充分定义，公开来源查询见 `research/noise_protocol_public_summary.json`；不能用随机噪声冒充原攻击。
+
+在独立作者环境中，先使用原项目安装步骤获取LightCCF数据，再运行：
+
+```powershell
+python scripts/setup_original_paper_sources.py
+python scripts/audit_original_datasets.py
+python scripts/run_paper_expansion_queue.py
+```
+
+图审计发现已知Amazon缓存异常时会返回非零，并已保存清洁图与审计JSON，应先阅读异常；队列只读取正式配置允许的图。`run_original_lightccf.py` 支持保存权重和明确的 `--resume`，拒绝用变化的代码或配置接续旧训练。原有课程实验输入和96份结果哈希已锁定保留。
 
 ## 主要结果
 

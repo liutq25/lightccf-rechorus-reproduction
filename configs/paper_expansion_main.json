@@ -1,0 +1,83 @@
+{
+  "stage": "original three datasets LightCCF, five seeds",
+  "source_sha256": "4770e5ca4354f5904bc871979ffa1ae912884be7fcdd2f7b020a555e7098b534",
+  "acceptance_sha256": "15fbbbf196262c383a017388d7cb6cebc59c3a13bc38652bc1f13ca481b7c4ef",
+  "discrepancy_gate": "Stop for audit when any completed seed differs by more than 5% relative from a paper main metric. This is an operational audit threshold, not a statistical test.",
+  "jobs": [
+    {
+      "dataset": "douban-book",
+      "seed": 2023,
+      "output": "runs/paper_expansion/main/douban-book/seed_2023"
+    },
+    {
+      "dataset": "douban-book",
+      "seed": 2024,
+      "output": "runs/paper_expansion/main/douban-book/seed_2024"
+    },
+    {
+      "dataset": "douban-book",
+      "seed": 2025,
+      "output": "runs/paper_expansion/main/douban-book/seed_2025"
+    },
+    {
+      "dataset": "douban-book",
+      "seed": 2026,
+      "output": "runs/paper_expansion/main/douban-book/seed_2026"
+    },
+    {
+      "dataset": "douban-book",
+      "seed": 2027,
+      "output": "runs/paper_expansion/main/douban-book/seed_2027"
+    },
+    {
+      "dataset": "tmall",
+      "seed": 2023,
+      "output": "runs/paper_expansion/main/tmall/seed_2023"
+    },
+    {
+      "dataset": "tmall",
+      "seed": 2024,
+      "output": "runs/paper_expansion/main/tmall/seed_2024"
+    },
+    {
+      "dataset": "tmall",
+      "seed": 2025,
+      "output": "runs/paper_expansion/main/tmall/seed_2025"
+    },
+    {
+      "dataset": "tmall",
+      "seed": 2026,
+      "output": "runs/paper_expansion/main/tmall/seed_2026"
+    },
+    {
+      "dataset": "tmall",
+      "seed": 2027,
+      "output": "runs/paper_expansion/main/tmall/seed_2027"
+    },
+    {
+      "dataset": "amazon-book",
+      "seed": 2023,
+      "output": "runs/paper_expansion/main/amazon-book/seed_2023"
+    },
+    {
+      "dataset": "amazon-book",
+      "seed": 2024,
+      "output": "runs/paper_expansion/main/amazon-book/seed_2024"
+    },
+    {
+      "dataset": "amazon-book",
+      "seed": 2025,
+      "output": "runs/paper_expansion/main/amazon-book/seed_2025"
+    },
+    {
+      "dataset": "amazon-book",
+      "seed": 2026,
+      "output": "runs/paper_expansion/main/amazon-book/seed_2026"
+    },
+    {
+      "dataset": "amazon-book",
+      "seed": 2027,
+      "output": "runs/paper_expansion/main/amazon-book/seed_2027"
+    }
+  ]
+}

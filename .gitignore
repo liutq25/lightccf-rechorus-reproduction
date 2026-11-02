@@ -16,6 +16,8 @@
 /research/requirements_checklist.md
 /research/official_*.py
 /research/official_*.sh
+/research/issues_*.json
+/research/noise_protocol_audit.json
 /*.pdf
 /*.docx
 /*.zip

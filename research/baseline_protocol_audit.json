@@ -1,0 +1,219 @@
+{
+  "baselines": [
+    {
+      "model": "MFBPR",
+      "source": "https://github.com/BlueGhostYi/ID-GRec/blob/10974d8d0d932d0018eda84bf46d2e8504b58ca8/models/MFBPR.py",
+      "code_sha256": "db29b2240afc51eed18522c0bac248d561d44a86e0417f69f24cc2def6e32a15",
+      "released_config_sha256": "618f431199a8d1c24d7d6655802e040dc09a86d939b6639d6b87c6c78b3ddbb5",
+      "released_config_available": true,
+      "trainer": "universal",
+      "status": "source_audited_formal_original_dataset_baseline_run_pending",
+      "common_paper_overrides": {
+        "embedding_size": 64,
+        "learn_rate": 0.001,
+        "reg_lambda": 0.0001
+      }
+    },
+    {
+      "model": "NGCF",
+      "source": "https://github.com/BlueGhostYi/ID-GRec/blob/10974d8d0d932d0018eda84bf46d2e8504b58ca8/models/NGCF.py",
+      "code_sha256": "ea5bb0736623d71cadf163187bb7ffa2b3b832b2d150f2467b17092f011b2ea9",
+      "released_config_sha256": "634eee0e33290b7100d2e3348c138e8a05e060a97d95c86cee4c37d96f86e4ce",
+      "released_config_available": true,
+      "trainer": "universal",
+      "status": "source_audited_formal_original_dataset_baseline_run_pending",
+      "common_paper_overrides": {
+        "embedding_size": 64,
+        "learn_rate": 0.001,
+        "reg_lambda": 0.0001
+      }
+    },
+    {
+      "model": "LightGCN",
+      "source": "https://github.com/BlueGhostYi/ID-GRec/blob/10974d8d0d932d0018eda84bf46d2e8504b58ca8/models/LightGCN.py",
+      "code_sha256": "d14fff3d8b6e4bdae12184d8ff6229987e542bddc97f267095771661f2fd24db",
+      "released_config_sha256": "dca1f79948de90a2f696765b2d2e902aed29a68903ba5f6c08923a4ef13e2c71",
+      "released_config_available": true,
+      "trainer": "universal",
+      "status": "source_audited_formal_original_dataset_baseline_run_pending",
+      "common_paper_overrides": {
+        "embedding_size": 64,
+        "learn_rate": 0.001,
+        "reg_lambda": 0.0001
+      }
+    },
+    {
+      "model": "SGL",
+      "source": "https://github.com/BlueGhostYi/ID-GRec/blob/10974d8d0d932d0018eda84bf46d2e8504b58ca8/models/SGL.py",
+      "code_sha256": "35e195fe2619460046e9d0d19c84c949087e8d3cfc3a6792b5b6b922bb203c42",
+      "released_config_sha256": "fac4ab94618038d754f1b66ab212b041d61bf085798636f2b0a225e0c56d5240",
+      "released_config_available": true,
+      "trainer": "custom",
+      "status": "source_audited_formal_original_dataset_baseline_run_pending",
+      "common_paper_overrides": {
+        "embedding_size": 64,
+        "learn_rate": 0.001,
+        "reg_lambda": 0.0001
+      }
+    },
+    {
+      "model": "NCL",
+      "source": "https://github.com/BlueGhostYi/ID-GRec/blob/10974d8d0d932d0018eda84bf46d2e8504b58ca8/models/NCL.py",
+      "code_sha256": "eda097570905289ef1fd0221f70cc2e7703c450c23f00abda3453ce7b09948ff",
+      "released_config_sha256": "8d98e181ff990db179b01eb16cb29789e3d3238b224215bfd2c9da6d9e6c6a43",
+      "released_config_available": true,
+      "trainer": "custom",
+      "status": "source_audited_formal_original_dataset_baseline_run_pending",
+      "common_paper_overrides": {
+        "embedding_size": 64,
+        "learn_rate": 0.001,
+        "reg_lambda": 0.0001
+      }
+    },
+    {
+      "model": "SimGCL",
+      "source": "https://github.com/BlueGhostYi/ID-GRec/blob/10974d8d0d932d0018eda84bf46d2e8504b58ca8/models/SimGCL.py",
+      "code_sha256": "66eba10690ec9a36ac58d3c8cd9d03cab708a18ab3a07a1c9f5c490a8c73f2e4",
+      "released_config_sha256": "66708aa668c92f29b2058487cfdd5d974faef98873a495242ba21afcd6f3a360",
+      "released_config_available": true,
+      "trainer": "universal",
+      "status": "source_audited_formal_original_dataset_baseline_run_pending",
+      "common_paper_overrides": {
+        "embedding_size": 64,
+        "learn_rate": 0.001,
+        "reg_lambda": 0.0001
+      }
+    },
+    {
+      "model": "DirectAU",
+      "source": "https://github.com/BlueGhostYi/ID-GRec/blob/10974d8d0d932d0018eda84bf46d2e8504b58ca8/models/DirectAU.py",
+      "code_sha256": "3b58a6e01c91212354189f3fe52988dbcce59e0a9152a70b5d7e847225669331",
+      "released_config_sha256": "d1ba45feec76d1a7dcd5856b580dd03551cc25d881e06d2ffe6e46ccfaadd1c7",
+      "released_config_available": true,
+      "trainer": "universal",
+      "status": "source_audited_formal_original_dataset_baseline_run_pending",
+      "common_paper_overrides": {
+        "embedding_size": 64,
+        "learn_rate": 0.001,
+        "reg_lambda": 0.0001
+      }
+    },
+    {
+      "model": "CVGA",
+      "source": "https://github.com/BlueGhostYi/ID-GRec/blob/10974d8d0d932d0018eda84bf46d2e8504b58ca8/models/CVGA.py",
+      "code_sha256": "dbae437ae752e29b71941b6cb21d5562734f7159da0b6bb2d90c6dd02c32b4c0",
+      "released_config_sha256": "28bc2862ed126a85aa67252a829a5723096ab07981117be4fd0671eed0b00b03",
+      "released_config_available": true,
+      "trainer": "custom",
+      "status": "source_audited_formal_original_dataset_baseline_run_pending",
+      "common_paper_overrides": {
+        "embedding_size": 64,
+        "learn_rate": 0.001,
+        "reg_lambda": 0.0001
+      }
+    },
+    {
+      "model": "LightGCL",
+      "source": "https://github.com/BlueGhostYi/ID-GRec/blob/10974d8d0d932d0018eda84bf46d2e8504b58ca8/models/LightGCL.py",
+      "code_sha256": "f7ff3d13302cb157c1d3ab0c1ef9f92a64b36878f937edf36cea7ab202dadc06",
+      "released_config_sha256": "943ed08e9b4b3675d89e918dad8c1f96feaaed879f9820a3be5eb03bbf6b407b",
+      "released_config_available": true,
+      "trainer": "universal",
+      "status": "source_audited_formal_original_dataset_baseline_run_pending",
+      "common_paper_overrides": {
+        "embedding_size": 64,
+        "learn_rate": 0.001,
+        "reg_lambda": 0.0001
+      }
+    },
+    {
+      "model": "CGCL",
+      "source": "https://github.com/BlueGhostYi/ID-GRec/blob/10974d8d0d932d0018eda84bf46d2e8504b58ca8/models/CGCL.py",
+      "code_sha256": "7d82aa9b98728c04b50bced67bd19199cf70161c82133bba103e2c49b548b9ee",
+      "released_config_sha256": "0b2d3cf19918635e24bb49619eff6cdf3a5285967a6e86901cb879736de9b3a6",
+      "released_config_available": true,
+      "trainer": "universal",
+      "status": "source_audited_formal_original_dataset_baseline_run_pending",
+      "common_paper_overrides": {
+        "embedding_size": 64,
+        "learn_rate": 0.001,
+        "reg_lambda": 0.0001
+      }
+    },
+    {
+      "model": "RecDCL",
+      "source": "https://github.com/BlueGhostYi/ID-GRec/blob/10974d8d0d932d0018eda84bf46d2e8504b58ca8/models/RecDCL.py",
+      "code_sha256": "0459b97b86a503b1c21482a53e404e2a7b726f248d120e520ada86fe3f87a848",
+      "released_config_sha256": "29c8ab6968cb72ccc6ba4963ba25ea75e0a7eb04ea7aac4a344c059354661226",
+      "released_config_available": true,
+      "trainer": "universal",
+      "status": "source_audited_formal_original_dataset_baseline_run_pending",
+      "common_paper_overrides": {
+        "embedding_size": 2048,
+        "learn_rate": 0.001,
+        "reg_lambda": 0.0001
+      }
+    },
+    {
+      "model": "BIGCF",
+      "source": "https://github.com/BlueGhostYi/ID-GRec/blob/10974d8d0d932d0018eda84bf46d2e8504b58ca8/models/BIGCF.py",
+      "code_sha256": "ad0c6d5783332a9707514da21b55f296424421d8572f216cf8af4801a6a63101",
+      "released_config_sha256": null,
+      "released_config_available": false,
+      "trainer": "universal",
+      "status": "source_audited_formal_original_dataset_baseline_run_pending",
+      "common_paper_overrides": {
+        "embedding_size": 64,
+        "learn_rate": 0.001,
+        "reg_lambda": 0.0001
+      },
+      "recovered_config": {
+        "source": "https://github.com/BlueGhostYi/BIGCF-full-sample",
+        "commit": "90dbf8241e07e8fc0afd9a43d56f2921a7bf58d3",
+        "sha256": "56caa50040d69118d6fac7b82322757f1438281d33868c48a3c3e22274daee52",
+        "note": "Same model config keys and math in the author full-sample integration; still a Yelp default, not a recovered LightCCF Table 5 dataset-specific optimum."
+      }
+    },
+    {
+      "model": "SCCF",
+      "source": "https://github.com/BlueGhostYi/ID-GRec/blob/10974d8d0d932d0018eda84bf46d2e8504b58ca8/models/SCCF.py",
+      "code_sha256": "0e98f9f145459556e7d1d40f3707908cdbb078ba144cf9e7228c9b807425cd36",
+      "released_config_sha256": "43d885c4af3304af42cd3e0a59e2db052304a32f8da5c65ccbc176d5bd3c0543",
+      "released_config_available": true,
+      "trainer": "universal",
+      "status": "source_audited_formal_original_dataset_baseline_run_pending",
+      "common_paper_overrides": {
+        "embedding_size": 64,
+        "learn_rate": 0.001,
+        "reg_lambda": 0.0001
+      }
+    },
+    {
+      "model": "Mult-VAE",
+      "repository": "https://github.com/dawenl/vae_cf",
+      "commit": "ad103c506c8897a853968e1b98c30f31cf5e30f6",
+      "status": "primary_source_fetched_integration_and_training_pending"
+    },
+    {
+      "model": "DiffRec",
+      "repository": "https://github.com/YiyanXu/DiffRec",
+      "commit": "d35a6c63c14cc0b376c138eb0b5c35895d1dcffd",
+      "status": "primary_source_fetched_integration_and_training_pending"
+    },
+    {
+      "model": "VGCL",
+      "repository": "https://github.com/yimutianyang/SIGIR23-VGCL",
+      "commit": "aaefcec14a9955e2a01c19e089f769d2ee61c02f",
+      "status": "primary_source_fetched_integration_and_training_pending"
+    }
+  ],
+  "limitations": [
+    "Published ID-GRec configs mainly target Yelp2018, not a complete dataset-specific set of Table 5 settings.",
+    "The pinned ID-GRec release omits configure/BIGCF.txt; a compatible config was recovered from the author BIGCF-full-sample repository. It is not evidence of the exact LightCCF experiment settings.",
+    "Dedicated LightCCF and ID-GRec use different test Recall selection indexes and early-stop comparisons.",
+    "NCL and SGL custom trainers calculate early-stop flags but do not break their loops on those flags in the pinned release.",
+    "RecDCL target histories are mutable tensors outside state_dict; any resumable training wrapper must save them explicitly.",
+    "VGCL primary repository says its original paper results use TensorFlow and its PyTorch version differs; the backend used by LightCCF Table 5 is not stated.",
+    "A resource probe is not model convergence, baseline accuracy validation, or a full paper reproduction."
+  ]
+}

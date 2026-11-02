@@ -1,0 +1,231 @@
+{
+  "status": "partial",
+  "scope": "original-paper expansion, separate from course experiment",
+  "datasets": {
+    "douban-book": {
+      "paper": {
+        "Recall@10": 0.133,
+        "NDCG@10": 0.1848,
+        "Recall@20": 0.1877,
+        "NDCG@20": 0.1857
+      },
+      "completed_seeds": [
+        2023
+      ],
+      "runs": [
+        {
+          "path": "runs/paper_expansion/main/douban-book/seed_2023/result.json",
+          "sha256": "84704127789e94c32c1d2f83fae70771db70d9815e2806eeca19ce648a287113",
+          "test": {
+            "Recall@10": 0.13188748331947667,
+            "Recall@20": 0.18542027187003343,
+            "NDCG@10": 0.18378176808717686,
+            "NDCG@20": 0.18461840844336858
+          },
+          "epochs": 54,
+          "best_epoch": 43,
+          "wall_seconds": 357.57961179999995,
+          "stopped_by_patience": true
+        }
+      ],
+      "sparsity_groups": [
+        {
+          "index": 0,
+          "label": "sparse",
+          "users": 8641,
+          "total_degree_min": 1,
+          "total_degree_max": 92,
+          "membership_sha256": "7e00c35271c7587e50eb25a513644129f03de3d322f4d05912c85b3a5da54201",
+          "metrics": {
+            "Recall@10": {
+              "mean": 0.14710132636885995,
+              "sample_std": null
+            },
+            "NDCG@10": {
+              "mean": 0.1471303753141027,
+              "sample_std": null
+            },
+            "Recall@20": {
+              "mean": 0.20346050767307217,
+              "sample_std": null
+            },
+            "NDCG@20": {
+              "mean": 0.16302133052752837,
+              "sample_std": null
+            }
+          }
+        },
+        {
+          "index": 1,
+          "label": "normal",
+          "users": 1898,
+          "total_degree_min": 93,
+          "total_degree_max": 220,
+          "membership_sha256": "4a047137be633535ae14e853502de163c83b970cdf394be42db00afad1069390",
+          "metrics": {
+            "Recall@10": {
+              "mean": 0.09102041772035593,
+              "sample_std": null
+            },
+            "NDCG@10": {
+              "mean": 0.2756351182037249,
+              "sample_std": null
+            },
+            "Recall@20": {
+              "mean": 0.13802582497937035,
+              "sample_std": null
+            },
+            "NDCG@20": {
+              "mean": 0.2270514980962903,
+              "sample_std": null
+            }
+          }
+        },
+        {
+          "index": 2,
+          "label": "popular",
+          "users": 694,
+          "total_degree_min": 221,
+          "total_degree_max": 2551,
+          "membership_sha256": "029e9c5133efb8fd9bde61c4aa16f82ff49a02547bebaaa4c9c16be6a4260021",
+          "metrics": {
+            "Recall@10": {
+              "mean": 0.054225916629865666,
+              "sample_std": null
+            },
+            "NDCG@10": {
+              "mean": 0.3889215756245342,
+              "sample_std": null
+            },
+            "Recall@20": {
+              "mean": 0.09041880591098501,
+              "sample_std": null
+            },
+            "NDCG@20": {
+              "mean": 0.3374748149412497,
+              "sample_std": null
+            }
+          }
+        }
+      ],
+      "selection_uses_test": true,
+      "five_seed_main_complete": false,
+      "metrics": {
+        "Recall@10": {
+          "mean": 0.13188748331947667,
+          "sample_std": null,
+          "seeds": 1,
+          "paper": 0.133,
+          "absolute_difference": -0.00111251668052334,
+          "relative_difference_percent": -0.8364787071604041
+        },
+        "NDCG@10": {
+          "mean": 0.18378176808717686,
+          "sample_std": null,
+          "seeds": 1,
+          "paper": 0.1848,
+          "absolute_difference": -0.001018231912823131,
+          "relative_difference_percent": -0.5509912948177154
+        },
+        "Recall@20": {
+          "mean": 0.18542027187003343,
+          "sample_std": null,
+          "seeds": 1,
+          "paper": 0.1877,
+          "absolute_difference": -0.002279728129966574,
+          "relative_difference_percent": -1.2145594725447961
+        },
+        "NDCG@20": {
+          "mean": 0.18461840844336858,
+          "sample_std": null,
+          "seeds": 1,
+          "paper": 0.1857,
+          "absolute_difference": -0.0010815915566314283,
+          "relative_difference_percent": -0.582440256667438
+        }
+      }
+    },
+    "tmall": {
+      "paper": {
+        "Recall@10": 0.0599,
+        "NDCG@10": 0.0574,
+        "Recall@20": 0.0949,
+        "NDCG@20": 0.0724
+      },
+      "completed_seeds": [],
+      "runs": [],
+      "sparsity_groups": [
+        {
+          "index": 0,
+          "label": "sparse",
+          "users": 22362,
+          "total_degree_min": 20,
+          "total_degree_max": 48,
+          "membership_sha256": "14e0c93b85ae5a02fb781e2e2df974bd54cc7fad0a37b31014ad8d2bf4e01908"
+        },
+        {
+          "index": 1,
+          "label": "normal",
+          "users": 16210,
+          "total_degree_min": 49,
+          "total_degree_max": 66,
+          "membership_sha256": "b47bd4ed06e042cbd1a6d2c0363037fc8fb973ebcffbcd248d0d8fafb8cb6831"
+        },
+        {
+          "index": 2,
+          "label": "popular",
+          "users": 9366,
+          "total_degree_min": 67,
+          "total_degree_max": 251,
+          "membership_sha256": "ef9cc69cf12d3d0a8332bc1e1219a4bd22244157d89c3eeeaae41753e8bedaa6"
+        }
+      ],
+      "selection_uses_test": true,
+      "five_seed_main_complete": false
+    },
+    "amazon-book": {
+      "paper": {
+        "Recall@10": 0.0347,
+        "NDCG@10": 0.0375,
+        "Recall@20": 0.0577,
+        "NDCG@20": 0.0462
+      },
+      "completed_seeds": [],
+      "runs": [],
+      "sparsity_groups": [
+        {
+          "index": 0,
+          "label": "sparse",
+          "users": 35431,
+          "total_degree_min": 16,
+          "total_degree_max": 46,
+          "membership_sha256": "22c8bf040f73bc4fc6b2ef5673f72765ed5592a10a4228e069ae987c675adc77"
+        },
+        {
+          "index": 1,
+          "label": "normal",
+          "users": 13462,
+          "total_degree_min": 47,
+          "total_degree_max": 135,
+          "membership_sha256": "adc4462984eb3b30e1cef0a8c863036890a698f3484630c3ad6371cfc47f855a"
+        },
+        {
+          "index": 2,
+          "label": "popular",
+          "users": 3750,
+          "total_degree_min": 136,
+          "total_degree_max": 13313,
+          "membership_sha256": "66aa4dbc9f7594e8984847b86dda120422ea8b9fa50f5c1baa0bd8674b7ffb1c"
+        }
+      ],
+      "selection_uses_test": true,
+      "five_seed_main_complete": false
+    }
+  },
+  "limitations": [
+    "Test Recall@20 selects epochs to reproduce the published entry point; these scores are not an unbiased held-out evaluation.",
+    "Unknown original random seeds and unreported original standard deviations prevent claiming statistical equivalence.",
+    "Amazon clean graph corrects four released-cache test edges; it cannot be assumed that the paper used that released cache.",
+    "Sparsity groups use total train+test user degree, exactly as the dedicated author code; this uses test information for descriptive grouping only."
+  ]
+}

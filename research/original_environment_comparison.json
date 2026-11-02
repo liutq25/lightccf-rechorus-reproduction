@@ -1,0 +1,26 @@
+{
+  "dataset": "douban-book",
+  "seed": 2023,
+  "epochs_compared": 54,
+  "old": {
+    "python": "3.11",
+    "torch": "2.5.1+cu121",
+    "numpy": "2.4.6"
+  },
+  "new": {
+    "python": "3.8.18",
+    "torch": "2.1.0+cu121",
+    "numpy": "1.24.3"
+  },
+  "max_absolute_metric_difference_at_native_8dp": 0.0,
+  "max_absolute_loss_component_difference_at_native_6dp": 0.0,
+  "full_precision_best_epoch_recall20_ndcg20_equal": true,
+  "interpretation": "On this full fixed-seed MF/Douban trajectory, changing to the recommended environment did not change the best result. This is not evidence of environment equivalence for all models/datasets.",
+  "evidence_sha256": {
+    "runs/official_anchor/douban-book/seed_2023/result.json": "a0e6908fb967d736c492cdd189fb49db1fef95b03ec4602c037f1e74ee934a35",
+    "runs/official_anchor/douban-book/seed_2023/author_train.log": "434890124695fb3b43c2e00da567bdb2bc126f80db2437759dd5562382bd59c6",
+    "runs/paper_expansion/main/douban-book/seed_2023/result.json": "84704127789e94c32c1d2f83fae70771db70d9815e2806eeca19ce648a287113",
+    "runs/paper_expansion/main/douban-book/seed_2023/history.jsonl": "582e408061f04b6a7eb457cfe3800b7deba80f311f60c015da95e1a1b055895d",
+    "runs/paper_expansion/main/douban-book/seed_2023/config.json": "1d9c35afd7cd4426b00a1ef664862ac9be43323dd2107eff853703ca9ea22c83"
+  }
+}
