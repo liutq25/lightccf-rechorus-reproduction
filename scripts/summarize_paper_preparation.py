@@ -3,6 +3,7 @@ from pathlib import Path
 from collections import Counter
 import hashlib
 import json
+import math
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -70,6 +71,17 @@ def main():
                         'available_physical_memory_bytes','working_set_bytes','script_sha256'):
                 if key in probe:
                     entry[key]=probe[key]
+            if row['model']=='CVGA' and probe['status']=='complete':
+                # An early probe forecast counted interaction batches although
+                # CVGA's published trainer batches users. Preserve its raw file
+                # and correct only this derived forecast from measured steps.
+                seconds=probe['training_step_seconds']
+                corrected=sum(seconds)/len(seconds)*math.ceil(probe['users']/probe['training_batch_size'])
+                if not math.isclose(probe['estimated_compute_seconds_per_epoch'],corrected,rel_tol=1e-9):
+                    entry['original_recorded_epoch_forecast_seconds']=probe['estimated_compute_seconds_per_epoch']
+                    entry['forecast_correction']='CVGA uses user batches, not interaction batches; recomputed from the unchanged measured optimizer step times.'
+                entry['estimated_compute_seconds_per_epoch']=corrected
+                entry['epoch_training_unit']='users'
             entries.append(entry)
         resource=dict(status='preflight_complete' if len(entries)==42 else 'partial_preflight',
             counts=dict(Counter(r['status'] for r in entries)),entries=entries,

@@ -543,9 +543,12 @@
         0.23423760000000016,
         0.23342000000000063
       ],
-      "estimated_compute_seconds_per_epoch": 529.0259840000006,
+      "estimated_compute_seconds_per_epoch": 11.021374666666677,
       "wall_seconds": 7.7759313,
-      "script_sha256": "1e405d26d2b96296f46e37f92a72c17a6cbf8c5abb12a18d00a11d81bf21030a"
+      "script_sha256": "1e405d26d2b96296f46e37f92a72c17a6cbf8c5abb12a18d00a11d81bf21030a",
+      "original_recorded_epoch_forecast_seconds": 529.0259840000006,
+      "forecast_correction": "CVGA uses user batches, not interaction batches; recomputed from the unchanged measured optimizer step times.",
+      "epoch_training_unit": "users"
     },
     {
       "dataset": "tmall",
