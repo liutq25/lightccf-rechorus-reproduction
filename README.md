@@ -4,6 +4,8 @@
 
 [论文](https://arxiv.org/abs/2504.10113v1) · [DOI](https://doi.org/10.1145/3726302.3730111) · [作者实现](https://github.com/ZzYUuuu/LightCCF) · [ReChorus](https://github.com/THUwangcy/ReChorus)
 
+学院 Linux / RTX3090 服务器接手请先读 [服务器交接文档](服务器交接文档.md)。`handoff/` 提供时间快照、稳定输入校验清单和任务登记模板；公开 Git 仓库不包含完整数据、权重和报告，须按文档搬运实验资产。现有 Windows 总队列尚不能直接作为 Linux 多卡调度器。
+
 ## 原文覆盖补全（2026-11-02 起，进行中）
 
 不以课程最低要求为停止标准；按 `research/full_paper_plan_20261102.md` 补三套原始数据、五种子主结果、LightCCF层数、CL-SS/CL-UI、原文基线、稀疏分组、参数与效率。尚未运行不等于不可运行，资源探测不等于精度复现。现有PDF和ZIP仍是上一阶段版本，待新增正式结果核验后再更新。

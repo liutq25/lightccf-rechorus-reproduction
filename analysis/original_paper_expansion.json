@@ -10,7 +10,11 @@
         "NDCG@20": 0.1857
       },
       "completed_seeds": [
-        2023
+        2023,
+        2024,
+        2025,
+        2026,
+        2027
       ],
       "runs": [
         {
@@ -26,6 +30,62 @@
           "best_epoch": 43,
           "wall_seconds": 357.57961179999995,
           "stopped_by_patience": true
+        },
+        {
+          "path": "runs/paper_expansion/main/douban-book/seed_2024/result.json",
+          "sha256": "35000a49b3186a8b302cda1ee01e12f9ddd4a86f6d8331d0b08ff0690f026a50",
+          "test": {
+            "Recall@10": 0.1317576479297717,
+            "Recall@20": 0.18444237920201675,
+            "NDCG@10": 0.18361249708302838,
+            "NDCG@20": 0.18420980580742552
+          },
+          "epochs": 54,
+          "best_epoch": 43,
+          "wall_seconds": 356.90602970000003,
+          "stopped_by_patience": true
+        },
+        {
+          "path": "runs/paper_expansion/main/douban-book/seed_2025/result.json",
+          "sha256": "9b936213d7dc3c107dacf316ff544906b313f069bb5c2a5635bd2fa445052979",
+          "test": {
+            "Recall@10": 0.13229867251315294,
+            "Recall@20": 0.18668124293950816,
+            "NDCG@10": 0.1839173114117793,
+            "NDCG@20": 0.18533537947466722
+          },
+          "epochs": 56,
+          "best_epoch": 45,
+          "wall_seconds": 371.9570303,
+          "stopped_by_patience": true
+        },
+        {
+          "path": "runs/paper_expansion/main/douban-book/seed_2026/result.json",
+          "sha256": "9a992cf8e3694d22ab73bcdaec203913c4d8e987e59756aeb2683219c7d86e66",
+          "test": {
+            "Recall@10": 0.13106622567077353,
+            "Recall@20": 0.18556392741236605,
+            "NDCG@10": 0.18373496230716177,
+            "NDCG@20": 0.18468898834897943
+          },
+          "epochs": 54,
+          "best_epoch": 43,
+          "wall_seconds": 357.7936452,
+          "stopped_by_patience": true
+        },
+        {
+          "path": "runs/paper_expansion/main/douban-book/seed_2027/result.json",
+          "sha256": "aaadca15113da0eb545edee3c02e5499376da120ae42a45195728761dee9d346",
+          "test": {
+            "Recall@10": 0.13119912187847738,
+            "Recall@20": 0.18448208595939608,
+            "NDCG@10": 0.18353799636533485,
+            "NDCG@20": 0.18403379860981364
+          },
+          "epochs": 54,
+          "best_epoch": 43,
+          "wall_seconds": 358.252129,
+          "stopped_by_patience": true
         }
       ],
       "sparsity_groups": [
@@ -38,20 +98,20 @@
           "membership_sha256": "7e00c35271c7587e50eb25a513644129f03de3d322f4d05912c85b3a5da54201",
           "metrics": {
             "Recall@10": {
-              "mean": 0.14710132636885995,
-              "sample_std": null
+              "mean": 0.14682059877987502,
+              "sample_std": 0.0006183968812118406
             },
             "NDCG@10": {
-              "mean": 0.1471303753141027,
-              "sample_std": null
+              "mean": 0.14760345493080113,
+              "sample_std": 0.0005530606202753108
             },
             "Recall@20": {
-              "mean": 0.20346050767307217,
-              "sample_std": null
+              "mean": 0.20329437615231388,
+              "sample_std": 0.001121615981785727
             },
             "NDCG@20": {
-              "mean": 0.16302133052752837,
-              "sample_std": null
+              "mean": 0.16335590606221279,
+              "sample_std": 0.0006970941647564572
             }
           }
         },
@@ -64,20 +124,20 @@
           "membership_sha256": "4a047137be633535ae14e853502de163c83b970cdf394be42db00afad1069390",
           "metrics": {
             "Recall@10": {
-              "mean": 0.09102041772035593,
-              "sample_std": null
+              "mean": 0.09085690123696524,
+              "sample_std": 0.00043422648324026986
             },
             "NDCG@10": {
-              "mean": 0.2756351182037249,
-              "sample_std": null
+              "mean": 0.2739737344500773,
+              "sample_std": 0.0012110720815376099
             },
             "Recall@20": {
-              "mean": 0.13802582497937035,
-              "sample_std": null
+              "mean": 0.13849467938704835,
+              "sample_std": 0.0005551948946445408
             },
             "NDCG@20": {
-              "mean": 0.2270514980962903,
-              "sample_std": null
+              "mean": 0.22642617072345939,
+              "sample_std": 0.0007079269110629687
             }
           }
         },
@@ -90,58 +150,58 @@
           "membership_sha256": "029e9c5133efb8fd9bde61c4aa16f82ff49a02547bebaaa4c9c16be6a4260021",
           "metrics": {
             "Recall@10": {
-              "mean": 0.054225916629865666,
-              "sample_std": null
+              "mean": 0.05419234399437728,
+              "sample_std": 0.00032796038610115845
             },
             "NDCG@10": {
-              "mean": 0.3889215756245342,
-              "sample_std": null
+              "mean": 0.3865250934573749,
+              "sample_std": 0.0028150174995806155
             },
             "Recall@20": {
-              "mean": 0.09041880591098501,
-              "sample_std": null
+              "mean": 0.08954939498358203,
+              "sample_std": 0.0009499042400687672
             },
             "NDCG@20": {
-              "mean": 0.3374748149412497,
-              "sample_std": null
+              "mean": 0.33435343880192975,
+              "sample_std": 0.0027630605557187856
             }
           }
         }
       ],
       "selection_uses_test": true,
-      "five_seed_main_complete": false,
+      "five_seed_main_complete": true,
       "metrics": {
         "Recall@10": {
-          "mean": 0.13188748331947667,
-          "sample_std": null,
-          "seeds": 1,
+          "mean": 0.13164183026233045,
+          "sample_std": 0.0005080630516967324,
+          "seeds": 5,
           "paper": 0.133,
-          "absolute_difference": -0.00111251668052334,
-          "relative_difference_percent": -0.8364787071604041
+          "absolute_difference": -0.0013581697376695567,
+          "relative_difference_percent": -1.0211802538868886
         },
         "NDCG@10": {
-          "mean": 0.18378176808717686,
-          "sample_std": null,
-          "seeds": 1,
+          "mean": 0.18371690705089622,
+          "sample_std": 0.00014799098702739745,
+          "seeds": 5,
           "paper": 0.1848,
-          "absolute_difference": -0.001018231912823131,
-          "relative_difference_percent": -0.5509912948177154
+          "absolute_difference": -0.0010830929491037755,
+          "relative_difference_percent": -0.5860892581730393
         },
         "Recall@20": {
-          "mean": 0.18542027187003343,
-          "sample_std": null,
-          "seeds": 1,
+          "mean": 0.1853179814766641,
+          "sample_std": 0.0009212539284985532,
+          "seeds": 5,
           "paper": 0.1877,
-          "absolute_difference": -0.002279728129966574,
-          "relative_difference_percent": -1.2145594725447961
+          "absolute_difference": -0.002382018523335916,
+          "relative_difference_percent": -1.2690562191454036
         },
         "NDCG@20": {
-          "mean": 0.18461840844336858,
-          "sample_std": null,
-          "seeds": 1,
+          "mean": 0.18457727613685088,
+          "sample_std": 0.0005048005599216596,
+          "seeds": 5,
           "paper": 0.1857,
-          "absolute_difference": -0.0010815915566314283,
-          "relative_difference_percent": -0.582440256667438
+          "absolute_difference": -0.0011227238631491276,
+          "relative_difference_percent": -0.6045901255514963
         }
       }
     },
@@ -152,8 +212,85 @@
         "Recall@20": 0.0949,
         "NDCG@20": 0.0724
       },
-      "completed_seeds": [],
-      "runs": [],
+      "completed_seeds": [
+        2023,
+        2024,
+        2025,
+        2026,
+        2027
+      ],
+      "runs": [
+        {
+          "path": "runs/paper_expansion/main/tmall/seed_2023/result.json",
+          "sha256": "51efb85d172590d856e1a0160ecb1907704d8c00e4865d5ae265510c0abb85eb",
+          "test": {
+            "Recall@10": 0.05952622366961525,
+            "Recall@20": 0.09427155335841479,
+            "NDCG@10": 0.05668252447683575,
+            "NDCG@20": 0.0715114360816902
+          },
+          "epochs": 71,
+          "best_epoch": 60,
+          "wall_seconds": 1899.4265468,
+          "stopped_by_patience": true
+        },
+        {
+          "path": "runs/paper_expansion/main/tmall/seed_2024/result.json",
+          "sha256": "34743e0dabab037eade1072ad6ebdccdd45df4ae41f0d1f6c267737815186bd2",
+          "test": {
+            "Recall@10": 0.05944593731837954,
+            "Recall@20": 0.09430796427531264,
+            "NDCG@10": 0.05699578870324299,
+            "NDCG@20": 0.07191282717059995
+          },
+          "epochs": 67,
+          "best_epoch": 56,
+          "wall_seconds": 1789.7237966,
+          "stopped_by_patience": true
+        },
+        {
+          "path": "runs/paper_expansion/main/tmall/seed_2025/result.json",
+          "sha256": "930f4f2c8c599047a752cd315922cc7192d6f84cb903f8b7cde2a47256f08195",
+          "test": {
+            "Recall@10": 0.05928082089448333,
+            "Recall@20": 0.09441567981356198,
+            "NDCG@10": 0.05665338335862053,
+            "NDCG@20": 0.07161549212572639
+          },
+          "epochs": 74,
+          "best_epoch": 63,
+          "wall_seconds": 1973.9911428999999,
+          "stopped_by_patience": true
+        },
+        {
+          "path": "runs/paper_expansion/main/tmall/seed_2026/result.json",
+          "sha256": "cdd72a0ee2983a117f2102613c47bb7bdb795c489cf842d7edc16a017f8f56d3",
+          "test": {
+            "Recall@10": 0.05950108425516473,
+            "Recall@20": 0.09398283650673667,
+            "NDCG@10": 0.05676738600179905,
+            "NDCG@20": 0.07152465579566275
+          },
+          "epochs": 66,
+          "best_epoch": 55,
+          "wall_seconds": 1761.1870703999998,
+          "stopped_by_patience": true
+        },
+        {
+          "path": "runs/paper_expansion/main/tmall/seed_2027/result.json",
+          "sha256": "e48c0b091841d860912645077e41b0327b7f385159ee3256c28eaa0ffdbc0c05",
+          "test": {
+            "Recall@10": 0.0592359223023698,
+            "Recall@20": 0.09439596269272914,
+            "NDCG@10": 0.056563417354215315,
+            "NDCG@20": 0.07157068591593982
+          },
+          "epochs": 72,
+          "best_epoch": 61,
+          "wall_seconds": 1802.3206226,
+          "stopped_by_patience": true
+        }
+      ],
       "sparsity_groups": [
         {
           "index": 0,
@@ -161,7 +298,25 @@
           "users": 22362,
           "total_degree_min": 20,
           "total_degree_max": 48,
-          "membership_sha256": "14e0c93b85ae5a02fb781e2e2df974bd54cc7fad0a37b31014ad8d2bf4e01908"
+          "membership_sha256": "14e0c93b85ae5a02fb781e2e2df974bd54cc7fad0a37b31014ad8d2bf4e01908",
+          "metrics": {
+            "Recall@10": {
+              "mean": 0.06082593042212039,
+              "sample_std": 0.00036404592179515346
+            },
+            "NDCG@10": {
+              "mean": 0.05252923521345,
+              "sample_std": 0.00037578553486568864
+            },
+            "Recall@20": {
+              "mean": 0.09702394136188072,
+              "sample_std": 0.0003425719388577988
+            },
+            "NDCG@20": {
+              "mean": 0.06767880412803984,
+              "sample_std": 0.00022017178616062135
+            }
+          }
         },
         {
           "index": 1,
@@ -169,7 +324,25 @@
           "users": 16210,
           "total_degree_min": 49,
           "total_degree_max": 66,
-          "membership_sha256": "b47bd4ed06e042cbd1a6d2c0363037fc8fb973ebcffbcd248d0d8fafb8cb6831"
+          "membership_sha256": "b47bd4ed06e042cbd1a6d2c0363037fc8fb973ebcffbcd248d0d8fafb8cb6831",
+          "metrics": {
+            "Recall@10": {
+              "mean": 0.05945119717710166,
+              "sample_std": 0.000274447409650149
+            },
+            "NDCG@10": {
+              "mean": 0.05728976135685491,
+              "sample_std": 0.00016405972405951507
+            },
+            "Recall@20": {
+              "mean": 0.09386551005694961,
+              "sample_std": 0.0003832170433040646
+            },
+            "NDCG@20": {
+              "mean": 0.0728963734045211,
+              "sample_std": 0.00024430527230596516
+            }
+          }
         },
         {
           "index": 2,
@@ -177,11 +350,63 @@
           "users": 9366,
           "total_degree_min": 67,
           "total_degree_max": 251,
-          "membership_sha256": "ef9cc69cf12d3d0a8332bc1e1219a4bd22244157d89c3eeeaae41753e8bedaa6"
+          "membership_sha256": "ef9cc69cf12d3d0a8332bc1e1219a4bd22244157d89c3eeeaae41753e8bedaa6",
+          "metrics": {
+            "Recall@10": {
+              "mean": 0.055896631521160735,
+              "sample_std": 0.0003974665460923729
+            },
+            "NDCG@10": {
+              "mean": 0.06580362957001595,
+              "sample_std": 0.000304552127056187
+            },
+            "Recall@20": {
+              "mean": 0.08841939306992316,
+              "sample_std": 0.00027293746328905063
+            },
+            "NDCG@20": {
+              "mean": 0.07885676127033077,
+              "sample_std": 0.00013718482012551502
+            }
+          }
         }
       ],
       "selection_uses_test": true,
-      "five_seed_main_complete": false
+      "five_seed_main_complete": true,
+      "metrics": {
+        "Recall@10": {
+          "mean": 0.05939799768800254,
+          "sample_std": 0.00013168692267833204,
+          "seeds": 5,
+          "paper": 0.0599,
+          "absolute_difference": -0.000502002311997464,
+          "relative_difference_percent": -0.8380672988271498
+        },
+        "NDCG@10": {
+          "mean": 0.05673249997894273,
+          "sample_std": 0.00016422843187246383,
+          "seeds": 5,
+          "paper": 0.0574,
+          "absolute_difference": -0.0006675000210572685,
+          "relative_difference_percent": -1.1628920227478523
+        },
+        "Recall@20": {
+          "mean": 0.09427479932935104,
+          "sample_std": 0.00017383944547592615,
+          "seeds": 5,
+          "paper": 0.0949,
+          "absolute_difference": -0.0006252006706489593,
+          "relative_difference_percent": -0.6587994422012189
+        },
+        "NDCG@20": {
+          "mean": 0.07162701941792382,
+          "sample_std": 0.00016494713712146412,
+          "seeds": 5,
+          "paper": 0.0724,
+          "absolute_difference": -0.0007729805820761854,
+          "relative_difference_percent": -1.067652737674285
+        }
+      }
     },
     "amazon-book": {
       "paper": {
